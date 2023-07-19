@@ -1,0 +1,30 @@
+body{
+    margin:0;
+
+}
+.bloc{
+    height:100px;
+    width: 100px;
+    
+}
+#bloc1{
+    
+    background:yellow;
+}
+
+#bloc2{
+    position:relative;
+    left:100px;
+    background:orange;
+}
+
+/* #bloc3{
+    position:relative;
+    left:200px;
+    background:red;
+} */
+#bloc3{
+    position:absolute;
+    left:200px;
+    background:red;
+}

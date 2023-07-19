@@ -27,3 +27,12 @@
     - Image
     - Liste d'ingrédients
     - Étapes de la recette
+11. Styliser la navbar avec une couleur de fond et en utilisant les propriétés pour aligner les points de menus
+12. Styliser le footer pour le rendre plus attractif
+13. Faite en sorte que l'opacité des images se réduisent lorsque l'on passe dessus avec la souris
+14. Styliser le tableau des horaires en ajoutant des couleurs et de l'espacement
+15. Mettre en forme le formulaire de contact et styliser le bouton :
+ajouter une couleur de fond
+ajouter un padding
+ajouter une bordure
+16. Utiliser une police de google fonts de votre choix pour l'ensemble du site web
