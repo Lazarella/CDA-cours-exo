@@ -1,0 +1,57 @@
+
+@keyframes trianglePath {
+    0%{
+transform:translate(initial);
+    }
+    25%{
+transform:translate(30px, 50px);
+    }
+    50%{
+transform:translate(-30px,50px);
+    }
+} 
+    
+
+.group{
+display: flex;
+flex-wrap:wrap;
+height:200px;
+width:200px;
+position:relative;
+justify-content: center;
+transition:linear;
+}
+
+.circleGreen{
+    position: absolute;
+    height: 50px;
+    width:50px;
+    background: green;
+    border-radius: 50%;
+    transform-origin:center;
+    z-index:1;
+    animation-name: trianglePath;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;   
+}    
+.circleBlue{
+    position: absolute;
+    height: 50px;
+    width:50px;
+    background: blue;
+    border-radius: 50%;
+    animation: trianglePath 3s infinite 1s;
+}    
+.circleRed{
+    position: absolute;
+    height: 50px;
+    width:50px;
+    background: red;
+    border-radius: 50%;
+    z-index:-1;
+    animation: trianglePath 3s infinite 2s;
+}    
+main{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+}

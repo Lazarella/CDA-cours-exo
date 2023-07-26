@@ -1,0 +1,90 @@
+
+;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300;400;500&display=swap');
+
+body, html{
+    margin:0;
+    box-sizing: border-box;
+}
+main{
+display: grid;
+grid-template-columns: 60% 40%;
+grid-template-areas:
+"left right";
+}
+.left{
+grid-area: left;
+display: grid;
+grid-template-rows: 60% 40%;
+grid-template-areas: 
+"top"
+"bottom";
+}
+.top{
+    grid-area: top;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    
+
+}
+.bottom{
+    grid-area: bottom;
+}
+.right{
+    grid-area: right;
+    position:relative;
+    color: orange;
+}
+h1{
+    font-size: 4rem;
+    font-family: 'Lobster', cursive;
+    color:orange;
+}
+p{
+    width:60%;
+    text-align: justify;
+    text-indent:4rem;
+}
+img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+#enter{
+    font-size: 1rem;
+    color:orange;
+    border-radius: 40%;
+    text-align: justify;
+    background:none;
+    border-radius: 28px;
+    border:orange solid;
+    padding: 0.5rem;
+}
+/* .geometric{
+    position: absolute;
+    z-index:1;
+} */
+.triangle, .square, .circle{
+    position: absolute;
+    z-index:1;
+}
+.triangle{
+    transform:rotate(20deg);
+    position:absolute;
+    
+}
+.square{
+    transform:scale(35%) rotate(-15deg);
+    filter: hue-rotate();
+}
+.circle{
+    transform: scale(30%);
+    
+}
