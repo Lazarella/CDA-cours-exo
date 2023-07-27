@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <main class="container">
+        <h2 class="display-1">Liste des Auteurs</h2>
+        <hr>
+        <table class="table table-dark table-striped text-center align-middle">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Photo</th>
+                    <th>Nom</th>
+                    <th>Date de naissance</th>
+                    <th>Ouvrage</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody >
+                <tr>
+                    <td>1</td>
+                    <td><img class="rounded-circle" src="./Assets/SF1.png" alt="portrait"></td>
+                    <td>Isabelle Asimov</td>
+                    <td>2 janvier 1920</td>
+                    <td><ul>
+                        <li>What</li>
+                        <li>Ever</li>
+                    </ul></td>
+                    <td>
+                        <button type="button" class="btn btn-outline-info p-1"><span class="bi bi-eye"> Details</span></button><span></span>
+                        <span><button type="button" class="btn btn-outline-secondary"><span class="bi bi-gear "> Edit</span></button>
+                        <button type="button" class="btn btn-outline-danger"><span class="bi bi-trash "> Delete</span></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><img class="rounded-circle" src="./Assets/SF2.png" alt="portrait"></td>
+                    <td>Frankline Herbert</td>
+                    <td>8 Octobre 1920</td>
+                    <td><ul>
+                        <li>What</li>
+                        <li>Ever</li>
+                    </ul>
+                </td>
+                <td>
+                        <button type="button" class="btn btn-outline-info"><span class="bi bi-eye"> Details</span></button><span></span>
+                        <span><button type="button" class="btn btn-outline-secondary"><span class="bi bi-gear "> Edit</span></button>
+                        <button type="button" class="btn btn-outline-danger"><span class="bi bi-trash "> Delete</span></button>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><img class="rounded-circle" src="./Assets/SF3.png" alt="portrait"></td>
+                    <td>Philippa K. Dick</td>
+                    <td>16 Décembre 1928</td>
+                    <td><ul>
+                        <li>What</li>
+                        <li>Ever</li>
+                    </ul></td>
+                    <td>
+                        <button type="button" class="btn btn-outline-info"><span class="bi bi-eye"> Details</span></button><span></span>
+                        <span><button type="button" class="btn btn-outline-secondary"><span class="bi bi-gear "> Edit</span></button>
+                        <button type="button" class="btn btn-outline-danger"><span class="bi bi-trash "> Delete</span></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><img class="rounded-circle" src="./Assets/SF4.png" alt="portrait"></td>
+                    <td>Renée Barjavel</td>
+                    <td>24 Janvier 1911</td>
+                    <td><ul>
+                        <li>What</li>
+                        <li>Ever</li>
+                    </ul></td>
+                    <td> <button type="button" class="btn btn-outline-info"><span class="bi bi-eye"> Details</span></button><span></span>
+                        <span><button type="button" class="btn btn-outline-secondary"><span class="bi bi-gear "> Edit</span></button>
+                        <button type="button" class="btn btn-outline-danger"><span class="bi bi-trash "> Delete</span></button></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><img class="rounded-circle" src="./Assets/SF5.png" alt="portrait"></td>
+                    <td>Juliette Vernes</td>
+                    <td>8 Février 1828</td>
+                    <td><ul>
+                        <li>What</li>
+                        <li>Ever</li>
+                    </ul></td>
+                    <td>
+                        <button type="button" class="btn btn-outline-info"><span class="bi bi-eye"> Details</span></button><span></span>
+                        <span><button type="button" class="btn btn-outline-secondary"><span class="bi bi-gear "> Edit</span></button>
+                        <button type="button" class="btn btn-outline-danger"><span class="bi bi-trash "> Delete</span></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <button type="button" class="btn btn-outline-success ms-auto d-block"><span class="bi bi-plus-circle ="> Ajouter un auteur</span></button>
+        <h2 class="display-1">Liste des Contacts</h2>
+        <hr>
+        <table class="table table-striped text-center align-middle">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Avatar</th>
+                    <th>Nom Complet</th>
+                    <th>Email</th>
+                    <th>Téléphone</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody >
+                <tr>
+                    <td>1</td>
+                    <td><img class="rounded-circle" src="./Assets/L1.png" alt="portrait"></td>
+                    <td>Sacha Renard</td>
+                    <td>sacha.renard@gmail.com</td>
+                    <td>+33 6 55 55 55 55</td>
+                    <td>
+                        <button type="button" class="btn btn-outline-info"><span class="bi bi-eye"> Details</span></button><span></span>
+                        <span><button type="button" class="btn btn-outline-warning"><span class="bi bi-pencil-square "> Edit</span></button>
+                        <button type="button" class="btn btn-outline-danger"><span class="bi bi-trash "> Delete</span></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><img class="rounded-circle" src="./Assets/L2.png" alt="portrait"></td>
+                    <td>Milan Parisel</td>
+                    <td>old.child@wnadoo.fr</td>
+                    <td><ul>
+                        <li>What</li>
+                        <li>Ever</li>
+                    </ul>
+                </td>
+                <td>
+                        <button type="button" class="btn btn-outline-info"><span class="bi bi-eye"> Details</span></button><span></span>
+                        <span><button type="button" class="btn btn-outline-secondary"><span class="bi bi-gear "> Edit</span></button>
+                        <button type="button" class="btn btn-outline-danger"><span class="bi bi-trash "> Delete</span></button>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><img class="rounded-circle" src="./Assets/L5.PNG" alt="portrait"></td>
+                    <td>Marin Leclerc</td>
+                    <td>marin.leclerc@gmail.com</td>
+                    <td><ul>
+                        <li>What</li>
+                        <li>Ever</li>
+                    </ul></td>
+                    <td>
+                        <button type="button" class="btn btn-outline-info"><span class="bi bi-eye"> Details</span></button><span></span>
+                        <span><button type="button" class="btn btn-outline-secondary"><span class="bi bi-gear "> Edit</span></button>
+                        <button type="button" class="btn btn-outline-danger"><span class="bi bi-trash "> Delete</span></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><img class="rounded-circle" src="./Assets/L3.PNG" alt="portrait"></td>
+                    <td>Rio Santos</td>
+                    <td>24 Janvier 1911</td>
+                    <td><ul>
+                        <li>What</li>
+                        <li>Ever</li>
+                    </ul></td>
+                    <td> <button type="button" class="btn btn-outline-info"><span class="bi bi-eye"> Details</span></button><span></span>
+                        <span><button type="button" class="btn btn-outline-secondary"><span class="bi bi-gear "> Edit</span></button>
+                        <button type="button" class="btn btn-outline-danger"><span class="bi bi-trash "> Delete</span></button></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><img class="rounded-circle" src="./Assets/L4.PNG" alt="portrait"></td>
+                    <td>Avery Nguyen</td>
+                    <td>8 Février 1828</td>
+                    <td><ul>
+                        <li>What</li>
+                        <li>Ever</li>
+                    </ul></td>
+                    <td>
+                        <button type="button" class="btn btn-outline-info"><span class="bi bi-eye"> Details</span></button><span></span>
+                        <span><button type="button" class="btn btn-outline-secondary"><span class="bi bi-gear "> Edit</span></button>
+                        <button type="button" class="btn btn-outline-danger"><span class="bi bi-trash "> Delete</span></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="d-flex flex-row-reverse">
+        <button type="button" class="btn btn-outline-success"><span class="bi bi-plus-circle ="> Ajouter un auteur</span></button>
+    </div>
+    </main>
+</body>
+</html>
