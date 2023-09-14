@@ -20,11 +20,10 @@ function StartGame() {
     // Génération d'un nombre Aléatoire
     nbMystere = Math.floor(Math.random() * (50 - 1)) + 1;
     nbCoups = 0;
-
     // Initialisation des champs HTML et boutons
     nbCoupsHTML.textContent = " " + nbCoups;
     ligne1.textContent = `J'ai généré un nombre entre 1 et 50 inclus`;
-    ligne2.textContent = `Essayez de le deviner en proposant ci-dessous`;
+    ligne2.textContent = `Essayez de le deviner en moins de 5 coups!`;
     nbUser.value = "";
     validerBtn.disabled = false;
     gagne = false;
@@ -34,6 +33,7 @@ function StartGame() {
 function UpdateNbCoups() {
     nbCoups++;
     nbCoupsHTML.textContent = nbCoups;
+    nbCoupsHTML.classList.add("bigNb");
 }
 
 // Fonction valider déclenchée par le bouton
@@ -47,6 +47,9 @@ function Valider() {
         UpdateNbCoups();        
         EndGame();
     }
+    else if(nbCoups>=5){
+        Loose(); // Limitaion des coups
+    }
     else if (nbTmp < nbMystere) {
         UpdateNbCoups();
         ligne1.textContent = `Le nombre mystère est plus grand que ${nbTmp}`;
@@ -55,8 +58,11 @@ function Valider() {
         UpdateNbCoups();
         ligne1.textContent = `Le nombre mystère est plus petit que ${nbTmp}`;
     }
+
     nbUser.value = "";
-}
+    }
+
+
 
 document.addEventListener("keyup", function (event) {
     if (event.key === "Enter" && !gagne) {
@@ -67,6 +73,13 @@ document.addEventListener("keyup", function (event) {
 // Fonction EndGame
 function EndGame() {
     ligne1.textContent = `Bravo...! ! ! Vous avez trouvé en ${nbCoups} coups!`;
+    ligne2.textContent = `Le nombre mystère était ${nbMystere}!`;
+    validerBtn.disabled = true;
+    gagne = true;
+}
+
+function Loose(){
+    ligne1.textContent = `Vous avez perdu ! ! ! il fallait trouver en moins de 5 coups!`;
     ligne2.textContent = `Le nombre mystère était ${nbMystere}!`;
     validerBtn.disabled = true;
     gagne = true;
