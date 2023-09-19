@@ -44,7 +44,7 @@ document.querySelector("#ticket").addEventListener('click', ()=>{
     
     if(newClient){
         parkingLot.addVehicule(newClient); 
-        newClient = ''; 
+       // newClient = ''; vider le champ text
     }
     
 })
