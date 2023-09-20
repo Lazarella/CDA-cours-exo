@@ -1,0 +1,8 @@
+#pageContent.home{
+    padding : 100px 20px;
+    min-height : 100vh; 
+    background-image: url("./Asset/rainbow-kitens-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed ;
+}
