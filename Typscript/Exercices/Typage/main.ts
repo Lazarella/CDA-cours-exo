@@ -17,8 +17,7 @@ console.table(userNames);
 
 //5 
 
-let person : object= {}
-person = {
+let person : object = {
     firstName: "Dupont",  
     age: 20,
     isLoggedIn: true,
@@ -27,12 +26,16 @@ person = {
 
 //6
 
-let personne1 : object  = {
+let personne1 :  {
+    firstName : string,
+    age: number, 
+    isLoggedIn : boolean,
+}= {
     firstName: "Dupont",
     age: 20,
     isLoggedIn: true
 }
-//console.log(personne1.age); // il n'est pas possible d'afficher la valeur age dans la console
+console.log(personne1.age); 
 
 //7 
 

@@ -10,8 +10,7 @@ let userNames = [];
 userNames.push(userName);
 console.table(userNames);
 //5 
-let person = {};
-person = {
+let person = {
     firstName: "Dupont",
     age: 20,
     isLoggedIn: true,
@@ -23,7 +22,7 @@ let personne1 = {
     age: 20,
     isLoggedIn: true
 };
-//console.log(personne1.age); // il n'est pas possible d'afficher la valeur age dans la console
+console.log(personne1.age);
 //7 
 let personne2 = {
     firstName: "Dupont",
