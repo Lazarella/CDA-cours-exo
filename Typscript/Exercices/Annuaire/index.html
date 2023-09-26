@@ -14,7 +14,7 @@
 <hr>
 <div id="myContacts"></div>
 <hr>
-<button type="submit" id="openFormBTN" class="btn btn-success">Add</button>
+<button type="submit" id="addBTN" class="btn btn-success">Add</button>
 </section>
 <section class="col-8 dark" id="details">
     <h3 class="display-3">Détails</h3>
@@ -22,19 +22,20 @@
 </section>
     </main>
 
-    <form action="">
+    <form action="" class="container">
         <label for="userFirstname">Firstname</label>
-        <input type="text" id="userFirstname">
+        <input type="text" id="userFirstname" >
         <label for="userLastname">Lastname</label>
         <input type="text" id="userLastname">
-        <label for="userFirstname">Firstname</label>
-        <input type="text">
-        <label for="userFirstname">Firstname</label>
-        <input type="text">
-        <label for="userFirstname">Firstname</label>
-        <input type="text">
-        <label for="userFirstname">Firstname</label>
-        <input type="text">
+        <label for="userBirthdate">Date Of Birth :</label>
+        <input type="date" id="userBirthdate">
+        <label for="userMail">Email</label>
+        <input type="email" id="userMail">
+        <label for="userPhone">Phone Number</label>
+        <input type="tel" id="userPhone">
+        <label for="userAvatar">Avatar</label>
+        <input type="text" id="userAvatar">
+        <button type="button" class="btn btn-warning" id="editBTN">Edit</button>
     </form>
 </body>
 </html>

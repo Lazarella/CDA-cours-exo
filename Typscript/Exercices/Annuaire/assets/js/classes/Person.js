@@ -1,13 +1,13 @@
 console.log("test");
 export class Person {
     constructor(firstName, lastName, dateOfBirth, mail, phone, img) {
-        this._id = new Date().valueOf();
         this._firstName = firstName;
         this._lastName = lastName;
         this._dateOfBirth = dateOfBirth;
         this._mail = mail;
         this._phone = phone;
         this._img = img;
+        this._id = Person.getId;
     }
     get firstname() {
         return this._firstName;
@@ -29,18 +29,24 @@ export class Person {
         return this._dateOfBirth;
     }
     set dateOfBirth(value) {
-        const currentDate = new Date();
-        if (value > currentDate) {
-            this._dateOfBirth = value;
+        this._dateOfBirth = value;
+    }
+    get age() {
+        const today = new Date();
+        const todaycopy = new Date();
+        todaycopy.setFullYear(this._dateOfBirth.getFullYear());
+        if (todaycopy < this._dateOfBirth) {
+            return today.getFullYear() - this._dateOfBirth.getFullYear() - 1;
+        }
+        else {
+            return today.getFullYear() - this._dateOfBirth.getFullYear();
         }
     }
     get mail() {
         return this._mail;
     }
     set mail(value) {
-        if (value !== "") {
-            this._mail = value;
-        }
+        this._mail = value;
     }
     get phone() {
         return this._phone;
@@ -62,3 +68,4 @@ export class Person {
         }
     }
 }
+Person.getId = new Date().valueOf();
