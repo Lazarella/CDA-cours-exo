@@ -5,12 +5,12 @@ export class Person{
     private _lastName: string; 
     private _dateOfBirth: Date;
     private _mail: string; 
-    private _phone: number; 
+    private _phone: string; 
     private _img: string; 
     private static getId = new Date().valueOf(); 
     private _id : number; 
 
-    constructor(firstName: string, lastName: string, dateOfBirth: Date, mail: string, phone: number, img: string){
+    constructor(firstName: string, lastName: string, dateOfBirth: Date, mail: string, phone: string, img: string){
         this._firstName = firstName;
         this._lastName = lastName; 
         this._dateOfBirth = dateOfBirth; 
@@ -63,8 +63,8 @@ export class Person{
         get phone(){
             return this._phone;
         }
-        set phone(value: number){
-            if (value !== null){
+        set phone(value: string){
+            if (value !== ""){
                 this._phone = value
             }
         }

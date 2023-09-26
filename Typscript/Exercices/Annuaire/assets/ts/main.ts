@@ -26,7 +26,7 @@ const mail = userMailInput.value;
 const phone = userPhoneInput.value; 
 const avatar = userAvatarInput.value;
 
-const newPerson = new Person( firstName, lastName, birthdate, mail, phone, avatar);
+const newPerson = new Person( firstName, lastName, new Date( birthdate), mail, phone, avatar);
 
 personList.addPerson(newPerson);
 const people  = document.createElement('div') as HTMLDivElement
