@@ -1,7 +1,9 @@
 import { Stack } from "./classes/Stack.js";
 
-let str : string = "Hello";
-let num : number = 42;
-let bool : boolean = true;
+const stack = new Stack<string>([]);
 
-addItem()
+stack.addItem("hello", "world"); 
+
+const stack2 = new Stack<number>([])
+
+stack2.addItem(42,35, 17.5)
