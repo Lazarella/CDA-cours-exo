@@ -7,8 +7,8 @@ export class Stack {
         console.table(this.itemsList);
         return this.itemsList;
     }
-    removeItem(item) {
-        this.itemsList = this.itemsList.filter((element) => element !== item);
+    removeItem(items) {
+        this.itemsList = this.itemsList.filter((element) => element !== items);
         console.table(this.itemsList);
         return this.itemsList;
     }
