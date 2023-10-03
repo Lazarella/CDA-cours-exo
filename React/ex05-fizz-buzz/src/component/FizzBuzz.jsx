@@ -2,7 +2,7 @@ import { useState } from "react";
 
 
 
-const FizzBuzz = ({ maxValue}) =>{
+const FizzBuzz = ({ maxValue =500}) =>{
 
 
 const [userNumber, setUserNumber] = useState(0);
