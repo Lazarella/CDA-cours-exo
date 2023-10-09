@@ -3,7 +3,7 @@
 import { useEffect } from "react"
 import { useState } from "react"
 
-const AddForm = () => {
+const ContactUs = () => {
 
     // const [value, setValue] = useContext(cardContext)
 
@@ -82,4 +82,4 @@ useEffect(()=> {
     
 }
 
-export default AddForm;
+export default ContactUs;

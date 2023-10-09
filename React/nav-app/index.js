@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 
 import router from './component/app-routing';
-import reportWebVitals from './reportWebVitals';
-import { RouterProvider } from 'react-router-dom';;
+import reportWebVitals from './src/route/reportWebVitals';
+import { RouterProvider } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

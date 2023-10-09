@@ -7,7 +7,7 @@ const submitHandler =()=>{
 }
     return(
 <>
-        <button className="btn btn-succes" onClick={submitHandler} value={date}>Add new Todo</button>
+        <button className="btn btn-succes" onClick={submitHandler}>Add new Todo</button>
 </>
         )
 }
