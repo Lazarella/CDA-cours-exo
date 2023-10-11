@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head>
-<body>
-    <main>
-        <div id="case">
-            <h3 class="display-4"> Mafstor<span>3000</span></h3>
-            <div id ="screen">
-            </div>
-            <div class="pad">
-                <button class="keys" data-key="C" id ="red" onclick="getData(event)">C</button>
-                <button class="keys" data-key="(" onclick="getData(event)">&#40;</button>
-                <button class="keys" data-key=")" onclick="getData(event)">&#41;</button>
-                <button class="keys" data-key="/" onclick="getData(event)">&#47;</button>
-                <button class="keys" data-key="7" onclick="getData(event)">7</button>
-                <button class="keys" data-key="8" onclick="getData(event)">8</button>
-                <button class="keys" data-key="9" onclick="getData(event)">9</button>
-                <button class="keys" data-key="x" onclick="getData(event)">&#215;</button>
-                <button class="keys" data-key="4" onclick="getData(event)">4</button>
-                <button class="keys" data-key="5" onclick="getData(event)">5</button>
-                <button class="keys" data-key="6" onclick="getData(event)">6</button>
-                <button class="keys" data-key="-" onclick="getData(event)">-</button>
-                <button class="keys" data-key="1" onclick="getData(event)">1</button>
-                <button class="keys" data-key="2" onclick="getData(event)">2</button>
-                <button class="keys" data-key="3" onclick="getData(event)">3</button>
-                <button class="keys" data-key="+" onclick="getData(event)">+</button>
-                <button class="keys" data-key="0" onclick="getData(event)">0</button>
-                <button class="keys" data-key="." onclick="getData(event)">.</button>
-                <button class="keys" data-key="=" id="grey" onclick="getData(event)">&#61;</button>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+    <body>
+        <main>
+            <canvas id="canevas"></canvas>
+            <h1 id="title" onmouseover="cheers()">Mafs is hard</h1>
+            <div id="case">
+                <img src="./Asset/Casio_logo_PNG1.png" alt="logo casio" >
+                <!-- <h3 class="display-4"> Mafstor<span>3000</span></h3> -->
+                <div id ="screen">
+                </div>
+                <div class="pad">
+                    <button class="keys" data-key="C" id ="red" onclick="getData(event)" onkeyup="getData(event)">C</button>
+                    <button class="keys" data-key="(" onclick="getData(event)" onkeyup="getData(event)">&#40;</button>
+                    <button class="keys" data-key=")" onclick="getData(event)" onkeyup="getData(event)">&#41;</button>
+                <button class="keys" data-key="/" onclick="getData(event)" onkeyup="getData(event)">&#47;</button>
+                <button class="keys" data-key="7" onclick="getData(event)" onkeyup="getData(event)">7</button>
+                <button class="keys" data-key="8" onclick="getData(event)" onkeyup="getData(event)">8</button>
+                <button class="keys" data-key="9" onclick="getData(event)" onkeyup="getData(event)">9</button>
+                <button class="keys" data-key="*" onclick="getData(event)" onkeyup="getData(event)">&#215;</button>
+                <button class="keys" data-key="4" onclick="getData(event)" onkeyup="getData(event)">4</button>
+                <button class="keys" data-key="5" onclick="getData(event)" onkeyup="getData(event)">5</button>
+                <button class="keys" data-key="6" onclick="getData(event)" onkeyup="getData(event)">6</button>
+                <button class="keys" data-key="-" onclick="getData(event)" onkeyup="getData(event)">-</button>
+                <button class="keys" data-key="1" onclick="getData(event)" onkeyup="getData(event)">1</button>
+                <button class="keys" data-key="2" onclick="getData(event)" onkeyup="getData(event)">2</button>
+                <button class="keys" data-key="3" onclick="getData(event)" onkeyup="getData(event)">3</button>
+                <button class="keys" data-key="+" onclick="getData(event)" onkeyup="getData(event)">+</button>
+                <button class="keys" data-key="0" onclick="getData(event)" onkeyup="getData(event)">0</button>
+                <button class="keys" data-key="." onclick="getData(event)" onkeyup="getData(event)">.</button>
+                <button class="keys" data-key="=" id="grey" onclick="getData(event)" >&#61;</button>
             </div>
         </div>
     </main>

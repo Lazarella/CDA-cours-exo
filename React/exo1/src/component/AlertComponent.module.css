@@ -1,0 +1,16 @@
+.fallBack{
+    color : purple; 
+    background: rgba(128, 0, 128, 0.507);
+    border: solid 3px purple; 
+}
+
+.info{
+    color: rgb(0, 26, 112);
+    background: rgb(179, 217, 253);
+    border: solid 1px rgb(58, 93, 156); 
+    border-radius: 5%;
+    padding: 1rem;
+    text-align: center;
+    width: 50%; 
+    margin : 2rem;
+}
