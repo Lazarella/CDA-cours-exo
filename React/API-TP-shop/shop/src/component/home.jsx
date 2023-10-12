@@ -1,24 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useItemContext } from "../context/itemContext";
 
 function HomePage() {
-    const { items, loading } = useItemContext();
+    const { items, loadItems } = useItemContext(); // Use the items and loadItems properties
 
-        if (loading) {
-    return <p>Loading...</p>;
-    }
+    // Load items when the component mounts
+    useEffect(() => {
+        loadItems();
+    }, []);
 
     return (
-    <div>
-        <h1>Blue Cocoon</h1>
-        <section id="showCase">
-        {items.map((item) => (
-            <div id="singleItem" key={item.id}>
-            <h6>{item.name}</h6>
-            </div>
-        ))}
-        </section>
-    </div>
+        <div>
+            <h1>Blue Cocoon</h1>
+            <section id="showCase">
+                {items.map((item) => ( // Use items.map to iterate over the items
+                    <div id="singleItem" key={item.id}>
+                        <h6>{item.title}</h6> {/* Use item.title instead of item.name */}
+                    </div>
+                ))}
+            </section>
+        </div>
     );
 }
 

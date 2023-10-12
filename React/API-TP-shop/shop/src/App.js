@@ -1,11 +1,11 @@
 import './App.css';
 import HomePage from './component/home';
-import { ItemProvider } from './context/itemContext'; // Correct import
+import { ItemProvider } from './context/itemContext'; 
 
 function App() {
   return (
     <ItemProvider> 
-      <HomePage></HomePage>
+      <HomePage/>
     </ItemProvider>
   );
 }

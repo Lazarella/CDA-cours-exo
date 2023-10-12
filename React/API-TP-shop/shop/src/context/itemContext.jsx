@@ -1,19 +1,42 @@
-import { createContext, useContext } from "react";
-import Item from "../modele/item";
+import React, { createContext, useContext, useEffect, useState } from "react";
+import CRUD from "../service/CRUD"; 
 
-export const myShopContext = createContext();
+export const MyShopContext = createContext();
 
 export const useItemContext = () => {
-  return useContext(myShopContext);
+  return useContext(MyShopContext);
 };
 
 export const ItemProvider = ({ children }) => {
-  const itemInstance = new Item();
+  const [items, setItems] = useState([]);
+  const itemCRUD = CRUD();
+
+  useEffect(() => {
+    
+    itemCRUD.getItem()
+      .then(response => {
+        setItems(response.data);
+      })
+      .catch(error => {
+        console.error("Error loading items: ", error);
+      });
+  }, []); 
+
+  const loadItems = () => {
+    itemCRUD.getItem()
+      .then(response => {
+        setItems(response.data);
+      })
+      .catch(error => {
+        console.error("Error loading items: ", error);
+      });
+  };
+
+  
 
   return (
-    <myShopContext.Provider value={itemInstance}>
+    <MyShopContext.Provider value={{ items, loadItems}}>
       {children}
-    </myShopContext.Provider>
+    </MyShopContext.Provider>
   );
 };
-
