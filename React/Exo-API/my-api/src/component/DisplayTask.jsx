@@ -7,7 +7,7 @@ const DisplayTask = () => {
 
   useEffect(() => {
     
-    axios.get("http://localhost:4092/task")
+    axios.get("http://localhost:5000/task")
     .then((response) => {
         setTasks(response.data);
     })
@@ -18,7 +18,7 @@ const DisplayTask = () => {
 
     const deleteTask = (taskId) => {
 
-    axios.delete(`http://localhost:4092/task/${taskId}`)
+    axios.delete(`http://localhost:5000/task/${taskId}`)
     .then(() => {
         console.log("Task with ID " + taskId + " deleted");
         

@@ -1,0 +1,169 @@
+{
+  "people": [
+    {
+      "name": "Chuckles McLaughington",
+      "age": 37,
+      "occupation": "Professional Clown"
+    },
+    {
+      "name": "Wanda Wacky",
+      "age": 29,
+      "occupation": "Banana Peel Tester"
+    },
+    {
+      "name": "Silly Billy",
+      "age": 42,
+      "occupation": "Pie-in-the-Face Champion"
+    },
+    {
+      "name": "Betty Bubbles",
+      "age": 33,
+      "occupation": "Bubbleologist"
+    },
+    {
+      "name": "Groucho Marx Jr.",
+      "age": 45,
+      "occupation": "Comedy Writer for Penguins"
+    },
+    {
+      "name": "Milton Mischief",
+      "age": 28,
+      "occupation": "Prank Call Specialist"
+    },
+    {
+      "name": "Mandy Mayhem",
+      "age": 31,
+      "occupation": "Wacky Invention Engineer"
+    },
+    {
+      "name": "Bozo Buckaroo",
+      "age": 36,
+      "occupation": "Rodeo Clown Extraordinaire"
+    },
+    {
+      "name": "Lenny Lightheart",
+      "age": 40,
+      "occupation": "Professional Tickler"
+    },
+    {
+      "name": "Fizz Whizbang",
+      "age": 27,
+      "occupation": "Soda Can Drummer"
+    },
+    {
+      "name": "Giggles O'Grin",
+      "age": 34,
+      "occupation": "Laughter Yoga Instructor"
+    },
+    {
+      "name": "Bobby Balloonatic",
+      "age": 30,
+      "occupation": "Balloon Animal Sculptor"
+    },
+    {
+      "name": "Lulu Loonybin",
+      "age": 39,
+      "occupation": "Crazy Cat Whisperer"
+    },
+    {
+      "name": "Spike Slapstick",
+      "age": 33,
+      "occupation": "Slapstick Comedy Coach"
+    },
+    {
+      "name": "Penny Pratfall",
+      "age": 35,
+      "occupation": "Professional Stumbler"
+    },
+    {
+      "name": "Jester Jamboree",
+      "age": 32,
+      "occupation": "Medieval Stand-up Comic"
+    },
+    {
+      "name": "Ricky Ridiculous",
+      "age": 38,
+      "occupation": "Absurdity Consultant"
+    },
+    {
+      "name": "Whoopee Cushion Carla",
+      "age": 29,
+      "occupation": "Practical Joke Designer"
+    },
+    {
+      "name": "Clara Clueless",
+      "age": 26,
+      "occupation": "Human Directional Sign Spinner"
+    },
+    {
+      "name": "Scooter Sillington",
+      "age": 41,
+      "occupation": "Scooter Stunt Performer"
+    },
+    {
+      "name": "Benny Bunkbed",
+      "age": 31,
+      "occupation": "Professional Bunk Bed Tester"
+    },
+    {
+      "name": "Dizzy Doodlebug",
+      "age": 28,
+      "occupation": "Comic Book Colorist for Ants"
+    },
+    {
+      "name": "Chester Chuckles",
+      "age": 37,
+      "occupation": "Tickle-Me-Elmo Repairman"
+    },
+    {
+      "name": "Molly Mirthquake",
+      "age": 34,
+      "occupation": "Jellybean Taste Tester"
+    },
+    {
+      "name": "Gaga Gigglesnort",
+      "age": 36,
+      "occupation": "Belly Laugh Choreographer"
+    },
+    {
+      "name": "Freddy Funnybone",
+      "age": 33,
+      "occupation": "Punchline Writer for Parrots"
+    },
+    {
+      "name": "Whacky Wendy",
+      "age": 29,
+      "occupation": "Professional Sock Puppeteer"
+    },
+    {
+      "name": "Lenny Lunaticus",
+      "age": 30,
+      "occupation": "Absurdist Philosopher"
+    },
+    {
+      "name": "Chuck Chortlesworth",
+      "age": 32,
+      "occupation": "Gum Wrapper Sculptor"
+    },
+    {
+      "name": "Squiggly Splatypus",
+      "age": 27,
+      "occupation": "Pancake Artiste"
+    },
+    {
+      "name": "Doodle D. Doodlestein",
+      "age": 35,
+      "occupation": "Doodle Artist Extraordinaire"
+    },
+    {
+      "name": "Boink Boinkerson",
+      "age": 33,
+      "occupation": "Professional Spring Tester"
+    },
+    {
+      "name": "Gizmo Giggletinker",
+      "age": 31,
+      "occupation": "Inventor of Useless Contraptions"
+    }
+  ]
+}
