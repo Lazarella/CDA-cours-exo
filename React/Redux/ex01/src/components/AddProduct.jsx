@@ -32,7 +32,9 @@ const AddProduct =() => {
             ref={descriptionRef}
             className="p-4 m-2"
             />
+            <div className="d-flex align-items-center">
             <button type="submit" className="btn btn-success m-4">Ajouter</button>
+            </div>
         </form>
         </>
     )
