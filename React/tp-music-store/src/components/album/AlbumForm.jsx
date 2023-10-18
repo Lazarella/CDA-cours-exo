@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { useDispatch } from "react-redux";
-import { createAlbum, updateAlbum } from "./albumItemsSlice";
+import { createAlbum } from "./albumItemsSlice";
 
 const AlbumForm =() =>{
 
@@ -20,8 +20,21 @@ const AlbumForm =() =>{
             artist : artistRef.current.value, 
             score : scoreRef.current.value,
             coverURL : coverRef.current.value 
-
-
         }
+        dispatch(createAlbum(newAlbum))
     }
+
+
+    return (
+        <>
+        <input type="text" ref={titleRef} />
+        <input type="text" ref={dateRef} />
+        <input type="text" ref={artistRef} />
+        <input type="text" ref={scoreRef} />
+        <input type="text" ref={coverRef} />
+        <button onClick={addAlbum}></button>
+        </>
+    )
 }
+
+export default AlbumForm
