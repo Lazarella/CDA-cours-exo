@@ -13,7 +13,7 @@ const Modal = (props) => {
                 {props.children}
             </div>
         </div>
-     );
+    );
 }
- 
+
 export default Modal;

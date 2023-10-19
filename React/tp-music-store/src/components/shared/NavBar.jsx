@@ -19,7 +19,7 @@ const NavBar = () => {
         }
             <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
                 <div className="container-fluid">
-                    <span className="navbar-brand"><i className="bi bi-globe"></i>eRecipes</span>
+                    <span className="navbar-brand"><h1>Edge Tone</h1>Unearth Your Sonic Rebellion<i className="bi bi-globe"></i></span>
                     <button 
                         onClick={() => !user ? dispatch(setAuthMode("Se connecter")) : dispatch(removeUser())}
                         className="ms-auto btn btn-info"
@@ -29,7 +29,7 @@ const NavBar = () => {
                 </div>
             </nav>
         </>
-     );
+    );
 }
  
 export default NavBar;

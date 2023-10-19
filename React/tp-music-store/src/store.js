@@ -5,6 +5,6 @@ import albumItemsSlice from "./components/album/albumItemsSlice";
 export default configureStore({
     reducer: {
         auth : authSlice,
-        albumItems : albumItemsSlice 
+        albumItems : albumItemsSlice, 
     }
 })
