@@ -1,4 +1,4 @@
-import readline from "redline"; 
+import readline from "readline"; 
 
 export function input(message) {
     // On créé une interface qui nous permet de lire et écrire dans la console
