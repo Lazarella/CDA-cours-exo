@@ -9,16 +9,16 @@ export default function TestModal({ visible, closeModal, list }){
         <Modal visible={visible}>
             <View>
                 <Button title="Ajouter un article" onPress={closeModal}/>
-                <FlatList>
+                <FlatList
                     data={list}
-                    renderItem={(item)=>{
+                    renderItem={({itemData})=>{
                         return(
                             <View>
-                                <Text style={styles.myitemList}>{item.text}</Text>
+                                <Text style={styles.myitemList}>{itemData.item}</Text>
                             </View>
                         )
                     }}
-                </FlatList>
+                />
             </View>
         </Modal>
     )
@@ -27,6 +27,6 @@ export default function TestModal({ visible, closeModal, list }){
 const styles = StyleSheet.create({
     myitemList: {
         color: "white", 
-        background : "3D30A2"
+        backgroundColor : "3D30A2"
     }
 });

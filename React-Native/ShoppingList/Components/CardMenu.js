@@ -1,4 +1,4 @@
-import { Button, StyleSheet, TextInput, View, Image } from "react-native"
+import { Button, StyleSheet, TextInput, View, Image, TestModal } from "react-native"
 import { useState } from "react"
 
 export default function CardMenu(){
@@ -35,7 +35,7 @@ export default function CardMenu(){
                 placeholder="Feu de forêt" 
                 style={styles.myInput}></TextInput>
             <Button title="Ajouter un article" onPress={addItem} ></Button>
-            <Button title="Cancel" onPress={deleteItem}></Button>
+            <Button title="Cancel" onPress={() => deleteItem(item.id)}></Button>
             <TestModal visible={modalVisible} closeModal={closeModal}></TestModal>
         </View>
     )
