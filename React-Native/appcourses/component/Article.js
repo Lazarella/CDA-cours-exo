@@ -3,13 +3,11 @@ import React from 'react'
 
 export default function Article(props) {
 
-  // function deleteArticle(id){
-  //   props.setArticles(prevlist => prevlist.filter((i)=>i.id !== id))
-  // }
 
   return (
     <View style={styles.articleItem}>
-      <Pressable onPress={() => props.deleteArticle(props.item.id)}>
+      {/* The logic is to consider "Pressable" as a button creator, so it's attached to his element */}
+      <Pressable onPress={() => props.deleteArticle(props.item.id)}> 
       <Text style={styles.articleText}>{props.item.text}</Text>
     </Pressable >
     </View>

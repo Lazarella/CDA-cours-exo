@@ -13,7 +13,6 @@ export default function App() {
             { text : article , id : Math.random().toString()}
         ])
         setModalIsVisible(false) //  closeModale()
-       
     }
 
     function closeModale(){
@@ -26,6 +25,7 @@ export default function App() {
 
     function deleteArticle(id){
       setArticles(prevlist => prevlist.filter((i)=>i.id !== id))
+      //prevlist ou articlesCurrent on la même fonction, représenter la liste au moment ou la fonction s'execute
     }
 
   return (
