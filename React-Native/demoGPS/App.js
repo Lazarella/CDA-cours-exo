@@ -33,8 +33,9 @@ export default function App() {
   axios.get({baseUrl}+'/'+{apiKey}+'/'+{latitude}+{longitude}+"/").then((response) => {
     console.log(response.data);
   });
+//rajouter un catch
+//mettre dans une fonction déclancher par un onPressed
 
-  
 
   return (
     <View>
