@@ -5,12 +5,13 @@ import Home from "./Screen/Home"
 import Pokedex from "./Screen/Pokedex"
 import Detail from "./Screen/Detail"
 import { Provider} from "react-redux"
-import { store } from './store'
+import store from './store'
 
 const Stack = createNativeStackNavigator()
 
 
 export default function App() {
+    return(
     <Provider store={store}>
     <NavigationContainer>
         <Stack.Navigator initialRouteName="Home">
@@ -22,5 +23,6 @@ export default function App() {
         </Stack.Navigator>
     </NavigationContainer>
     </Provider>
+    )
 }
 
