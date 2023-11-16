@@ -17,8 +17,8 @@ public class AbcNAme {
         System.out.println("Veuillez entrer un troisième nom");
         String name3 = scanner.next();
 
-        char char1 = name.charAt(0);
-        char char2 = name.charAt(0);
-        char char3 = name.charAt(0);
+        if (name.toLowerCase().compareTo(name2)>0){
+
+        }
     }
 }

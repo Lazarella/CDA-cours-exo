@@ -11,14 +11,14 @@ public class ReadPrice {
 
         System.out.println("\n **** Exercice 2 ****\n");
         System.out.println("Veuillez renseigner le prix BRUT de l'article");
-        Double priceRow = scanner.nextDouble();
+        double priceRow = scanner.nextDouble();
 
         System.out.println("Veuillez renseigner le taux de la TVA (en %)");
-        Double tva = scanner.nextDouble();
+        double tva = scanner.nextDouble();
 
-        Double fullTva = tva/100 + 1;
+        double fullTva = tva/100 + 1;
 
-        Double fullPrice = priceRow * fullTva;
+        double fullPrice = priceRow * fullTva;
 
         System.out.println("Le prix de l'article est de "+Math.round(fullPrice)+" €");
         System.out.println("le montant de la TVA est de "+ priceRow*(tva/100)+" €" );

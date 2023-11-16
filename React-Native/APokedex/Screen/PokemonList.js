@@ -13,7 +13,7 @@ useEffect(()=>{
     const fetchData = async () => {
         try{
             const response = await dispatch(fetchPokemons())
-            console.log(response.payload);
+            console.log("kiki",response.payload);
         setThisPokemons(response.payload)
         }catch (error){
             console.error("Oups! Une erreur s'est produite : ",error)

@@ -7,7 +7,7 @@ export const fetchPokemons = createAsyncThunk(
     'pokemon/fetchPokemons',
     async () => {
         const response = await axios.get(`${BASE_URL}?limit=40`);
-        console.log(response.data)
+        console.log("coucou",response.data)
         return response.data.results; 
     }
 );
@@ -17,6 +17,7 @@ export const fetchPokemon = createAsyncThunk(
     'pokemon/fetchPokemon',
     async (id) => {
         const response = await axios.get(BASE_URL+`/${id}`)
+
         return response.data
     }
 )

@@ -11,17 +11,18 @@ public class DontMultiply {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Veuillez entrer un nombre");
-        Double nbUser1 = scanner.nextDouble();
+        double nbUser1 = scanner.nextDouble();
 
         System.out.println("Veuillez entrer un autre nombre");
-        Double nbUser2 = scanner.nextDouble();
+        double nbUser2 = scanner.nextDouble();
 
         if (nbUser1<0 && nbUser2<0){
 
             System.out.println("Le produit des deux nombre est positif");
 
-        }else if (nbUser1<0 && nbUser2<0){
+        }else if (nbUser1>0 && nbUser2>0){
             System.out.println("Le produit des deux nombre est positif");
+
         } else if (nbUser1<0 ^ nbUser2<0) {
             System.out.println("Le produit des deux nombre est négatif");
 
