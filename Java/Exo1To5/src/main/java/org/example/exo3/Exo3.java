@@ -21,35 +21,37 @@ public class Exo3 {
         int nbUser;
 
             do {
-                System.out.println("Veuillez entrer un nombre compris entre 1 et 3");
+                System.out.println("Veuillez entrer un nombre compris entre 10 et 20");
 
                 nbUser = scanner.nextInt();
 
-                if(nbUser<21 && nbUser>9){
-                    System.out.println("Plus petit!");
-                }else if(nbUser>9){
-                    System.out.println("Plus grand!");
+                if(nbUser>20){
+                    System.out.println("Plus petit!\n");
+                }else if(nbUser<10){
+                    System.out.println("Plus grand!\n");
                 }
 
-            }while(nbUser<9 || nbUser>21);
+            }while(nbUser< 10 || nbUser > 20);
 
     }
 
     public static void getPlusTen() {
 
+        int  nbUser = 0;
+
         System.out.println("Veuillez entrer un nombre");
 
-       int  nbUser = scanner.nextInt();
+        nbUser = scanner.nextInt();
 
         for (int i = 0; i < 10; i++) {
 
-            nbUser = +1;
+            nbUser += 1;
             System.out.println("Votre nombre plus "+i+" est : "+ nbUser);
         }
 
     }
 
-    public static void getTableOfMultiplication(String[] args) {
+    public static void getTableOfMultiplication() {
 
         System.out.println("Veuillez entrer un nombre");
 
@@ -57,7 +59,7 @@ public class Exo3 {
 
         System.out.println("• Table de "+nbUser);
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 11; i++) {
 
             int result = nbUser * i;
 
@@ -67,22 +69,21 @@ public class Exo3 {
 
     }
 
-    public static void intChain(String[] args) {
+    public static void intChain() {
 
         System.out.println("Veuillez entrer un nombre");
 
         int  nbUser = scanner.nextInt();
-        int resultOne = 0;
         int result = 0;
 
-        for (int i = 0; i < nbUser; i++) {
-            resultOne +=  i;
-            result = result +resultOne;
+        for (int i = 1; i < nbUser+1; i++) {
+            result += i;
+
         }
         System.out.println("La somme des entiers de "+nbUser+" est :"+result);
     }
 
-    public static void twentyNumbers(String[] args) {
+    public static void twentyNumbers() {
 
         int counter=0;
         int biggerInt=0;
@@ -189,6 +190,8 @@ public class Exo3 {
             priceUser = scanner.nextInt();
 
             totalPrice += priceUser;
+
+            System.out.println("Le prix de votre commande est de :"+totalPrice);
 
         }while(priceUser!=0);
 

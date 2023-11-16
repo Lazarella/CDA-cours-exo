@@ -1,14 +1,8 @@
 package org.example;
 
-import org.example.abcNames.AbcNAme;
-import org.example.askName.AskName;
-import org.example.checkMyNumber.CheckMyNumber;
-import org.example.dontMultiple.DontMultiply;
-import org.example.exo2.Exo2;
-import org.example.readPrice.ReadPrice;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import org.example.exo3.Exo3;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -17,10 +11,25 @@ public class Main {
         //CheckMyNumber.getTheTruthOfMyNumber();
         //DontMultiply.getTheTruthOfMultiplication();
         //AbcNAme.checkMyAbc();
-        Exo2.AskNumber();
-        Exo2.AskAge();
-        Exo2.CheckDivisible();
-        Exo2.getPrice();
+
+        //Exo2.AskNumber();
+        //Exo2.AskAge();
+        //Exo2.CheckDivisible();
+        //Exo2.getPrice();
+
+        //Exo3.GetRightNumber();
+        //Exo3.GetRightNumberOrElse();
+        //Exo3.getPlusTen();
+        //Exo3.getTableOfMultiplication();
+        //Exo3.intChain();
+        //Exo3.twentyNumbers();
+        //Exo3.butWhatIndex();
+        //Exo3.stopOnZero();
+        //Exo3.calculFacto();
+        //Exo3.yourPrice();
+        Exo3.algoN();
+
+
 
         }
     }
