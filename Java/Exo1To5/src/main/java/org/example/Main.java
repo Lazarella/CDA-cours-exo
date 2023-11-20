@@ -2,6 +2,7 @@ package org.example;
 
 
 import org.example.exo3.Exo3;
+import org.example.exotableau.ExoTableau;
 
 public class Main {
     public static void main(String[] args) {
@@ -27,7 +28,11 @@ public class Main {
         //Exo3.stopOnZero();
         //Exo3.calculFacto();
         //Exo3.yourPrice();
-        Exo3.algoN();
+        //Exo3.algoN();
+        ExoTableau.ex51();
+        ExoTableau.ex52();
+        ExoTableau.ex53();
+        ExoTableau.ex54();
 
 
 

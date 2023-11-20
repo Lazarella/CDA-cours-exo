@@ -113,7 +113,7 @@ public class Exo3 {
         int counter=0;
         int biggerInt=Integer.MIN_VALUE;
         int nbUser;
-        int position = -1;
+        int position = 0;
 
         do{
             counter ++;
@@ -125,7 +125,7 @@ public class Exo3 {
 
                 if(nbUser>biggerInt){
                     biggerInt = nbUser;
-                    position = counter;
+                    position = i+1;
 
                 }
 
@@ -134,6 +134,7 @@ public class Exo3 {
         }while(counter<20);
 
         System.out.println("Le plus grand de ces nombres est "+biggerInt);
+        System.out.println("la position du plus grand nombre est "+position);
 
     }
 
@@ -142,6 +143,7 @@ public class Exo3 {
         int counter=0;
         int biggerInt= Integer.MIN_VALUE;
         int nbUser;
+        int position = 0;
 
         do{
             System.out.println("Veuillez entrer un autre nombre (vous pouvez interrompre la saisie en entrant '0') "+counter+ " :");
@@ -151,12 +153,13 @@ public class Exo3 {
 
                 if(nbUser>biggerInt){
                     biggerInt = nbUser;
+                    position += 1;
             }
 
         }while(nbUser!=0);
 
         System.out.println("Le plus grand de ces nombres est "+biggerInt);
-
+        System.out.println("la position du plus grand nombre est "+position);
     }
 
 
@@ -169,8 +172,6 @@ public class Exo3 {
         for (int i = 2; i <= nbUser; i++) {
 
             facto *= i ;
-
-
 
         }
 
