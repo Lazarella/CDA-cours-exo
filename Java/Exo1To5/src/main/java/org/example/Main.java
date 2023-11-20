@@ -33,8 +33,10 @@ public class Main {
         ExoTableau.ex52();
         ExoTableau.ex53();
         ExoTableau.ex54();
-
-
-
+        ExoTableau.ex55();
+        ExoTableau.ex56();
+        ExoTableau.ex57();
+        ExoTableau.ex58();
+        
         }
     }
