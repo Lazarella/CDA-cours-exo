@@ -37,6 +37,6 @@ public class Main {
         ExoTableau.ex56();
         ExoTableau.ex57();
         ExoTableau.ex58();
-        
+
         }
     }
