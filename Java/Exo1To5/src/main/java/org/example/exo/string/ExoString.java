@@ -106,8 +106,9 @@ public class ExoString {
                 break;
             }
         }
-        if(isPalindrome){
-        System.out.printf("'%s' est un palindrome, félicitations!", str);}
+        if (isPalindrome) {
+            System.out.printf("'%s' est un palindrome, félicitations!", str);
+        }
     }
 
     public static void pyramid() {
@@ -118,22 +119,20 @@ public class ExoString {
 
         int height = scanner.nextInt();
         int counter = 0;
-        String bricks ="\n";
+        String bricks = "\n";
+        StringBuilder newBricks = new StringBuilder(bricks);
 
-        while (counter!=height){
-            for(int i = 0; i <height/2; i++){
+        while (counter != height) {
+            for (int i = 0; i < height; i++) {
                 bricks = bricks + "*";
-                System.out.printf("%s", bricks);
-                counter ++;
+                System.out.println(bricks);
+                counter++;
             }
-            //for(int i = 0; i <height/2; i++){
-                //bricks = bricks - "*";
-                //System.out.printf("%s", bricks);
-                //counter ++;
+            for (int i = height - 1; i > 0; i--) {
+                bricks = bricks.substring(0, i);
+                System.out.println(bricks);
+            }
 
-            //}
         }
-
-
     }
 }

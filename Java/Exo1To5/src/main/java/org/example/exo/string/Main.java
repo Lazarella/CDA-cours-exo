@@ -6,8 +6,8 @@ public class Main {
 
         ExoString.comptageDeMot();
         ExoString.comptageOccurence();
-        ExoString.anagramme();
-        ExoString.palindrome();
+        //ExoString.anagramme();
+        //ExoString.palindrome();
         ExoString.pyramid();
 
     }
