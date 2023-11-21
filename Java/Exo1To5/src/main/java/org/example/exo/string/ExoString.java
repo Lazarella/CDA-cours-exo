@@ -15,7 +15,7 @@ public class ExoString {
 
         String str = "Salut les petits potes!";
 
-        String[] strArr = str.split(" ");
+        String[] strArr = str.trim().split(" ");
 
         System.out.printf("La phrase contient %s mots", strArr.length);
 
@@ -135,4 +135,5 @@ public class ExoString {
 
         }
     }
+
 }
