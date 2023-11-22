@@ -29,14 +29,16 @@ public class Main {
         //Exo3.calculFacto();
         //Exo3.yourPrice();
         //Exo3.algoN();
-        ExoTableau.ex51();
-        ExoTableau.ex52();
-        ExoTableau.ex53();
-        ExoTableau.ex54();
-        ExoTableau.ex55();
-        ExoTableau.ex56();
-        ExoTableau.ex57();
-        ExoTableau.ex58();
+//        ExoTableau.ex51();
+//        ExoTableau.ex52();
+//        ExoTableau.ex53();
+//        ExoTableau.ex54();
+//        ExoTableau.ex55();
+//        ExoTableau.ex56();
+//        ExoTableau.ex57();
+//        ExoTableau.ex58();
+
+
 
         }
     }

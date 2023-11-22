@@ -1,6 +1,7 @@
 package org.example.matrix;
 
 import org.example.function.Function;
+import org.example.recursivity.Recusivity;
 
 public class Main {
 
@@ -12,5 +13,6 @@ public class Main {
         //Function.ex_2();
         //Function.ex_3();
         //Function.ex_4();
+        Recusivity.ex_1();
     }
 }
