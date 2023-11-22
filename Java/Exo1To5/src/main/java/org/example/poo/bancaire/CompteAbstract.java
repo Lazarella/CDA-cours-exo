@@ -1,6 +1,6 @@
 package org.example.poo.bancaire;
 
-abstract class CompteAbstract {
+public abstract class CompteAbstract {
     protected int code;
     protected double solde;
     public static int counter;
@@ -13,14 +13,34 @@ abstract class CompteAbstract {
         this.code = counter;
         this.solde = solde;
     }
-    public double moreMoney(int fee){
+    public double moreMoney(double fee){
         solde += fee;
         return solde;
     }
 
-    public double lessMoney(int fee){
-        solde -= fee;
+    public double lessMoney(double fee){
+        if((solde-fee)> 0 ) {
+            solde -= fee;
+        }else{
+            System.out.println("Vous n'avait pas assez d'argent pour effectuer un retrait");
+        }
         return solde;
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
+    }
+
+    public double getSolde() {
+        return solde;
+    }
+
+    public void setSolde(double solde) {
+        this.solde = solde;
     }
 
     @Override

@@ -1,7 +1,20 @@
 package org.example.poo.bancaire;
 
 public class CompteSimple extends CompteAbstract{
-    public CompteSimple(double solde) {
+
+    protected double decouvert ;
+    public CompteSimple(double solde, double decouvert) {
         super(solde);
+        this.solde = solde;
+        this.decouvert = decouvert;
+    }
+    public double lessMoney(double fee){
+        if ((solde-fee)>= decouvert){
+            solde -= fee;
+        }else{
+            System.out.println("Vous n'avez pas essez d'argent pour effectuer un retrait");
+        }
+        return solde;
     }
 }
+
