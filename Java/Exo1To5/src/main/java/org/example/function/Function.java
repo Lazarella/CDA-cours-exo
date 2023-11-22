@@ -1,6 +1,7 @@
 package org.example.function;
 
 import java.sql.SQLOutput;
+import java.util.Arrays;
 import java.util.Scanner;
 
 
@@ -31,6 +32,7 @@ public class Function {
     public static void getMaxNb(int[] tab) {
 
         int bigInt = 0;
+
 
         for (int i = 0; i < tab.length; i++) {
 
@@ -104,6 +106,42 @@ public class Function {
     public static void countMyWords(String[]tab) {
 
         System.out.printf("La phrase contient %s mots", tab.length);
+
+    }
+
+    public static void ex_4() {
+
+        System.out.println();
+        System.out.println("Veuillez entrer des mots aléatoires séparé par un espace");
+
+        String str = scanner.nextLine();
+
+        System.out.println("Veuillez entre la longueur minimale des mots ");
+
+        int lengthMin = scanner.nextInt();
+
+        String [] strArr = str.trim().split(" ");
+
+        String [] filtredArr = filterWordByLength(strArr, lengthMin);
+
+        System.out.println("Le mots restants sont : ");
+        for (String value: filtredArr
+             ) {
+
+            System.out.println(value);
+
+        }
+
+    }
+
+    public static String[] filterWordByLength(String[] tab, int nb) {
+
+        tab = Arrays.stream(tab).filter(x -> x.length() >= nb).toArray(String[]::new);
+
+        return tab;
+    }
+
+    public static void ex_5(String[] args) {
 
     }
 }

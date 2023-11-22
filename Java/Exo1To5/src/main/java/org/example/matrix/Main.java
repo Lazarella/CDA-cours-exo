@@ -9,7 +9,8 @@ public class Main {
         //Matrix.ex_5();
         //Matrix.ex_6();
         //Function.ex_1();
-        Function.ex_2();
-        Function.ex_3();
+        //Function.ex_2();
+        //Function.ex_3();
+        //Function.ex_4();
     }
 }
