@@ -8,7 +8,7 @@ public class CompteEpargne extends CompteAbstract{
         super(solde);
         this.solde = solde;
     }
-    public double caculInterestRate(){
+    public double calculInterestRate(){
         solde *= (INTEREST_RATE/100);
         return solde;
     }

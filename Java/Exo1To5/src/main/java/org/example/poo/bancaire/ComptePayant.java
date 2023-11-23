@@ -9,9 +9,9 @@ public class ComptePayant extends CompteAbstract {
         super(solde);
     }
 public double moreMoney(double fee){
-          feeTax = fee * getTAX();
-         solde+= feeTax;
-         return solde;
+        feeTax = fee * getTAX();
+        solde+= feeTax;
+        return solde;
 }
 public double lessMoney(double fee){
     if((solde-fee)> 0 ) {

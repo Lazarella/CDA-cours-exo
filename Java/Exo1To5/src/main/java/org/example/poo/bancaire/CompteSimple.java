@@ -12,7 +12,7 @@ public class CompteSimple extends CompteAbstract{
         if ((solde-fee)>= decouvert){
             solde -= fee;
         }else{
-            System.out.println("Vous n'avez pas essez d'argent pour effectuer un retrait");
+            System.out.println("Vous n'avez pas assez d'argent pour effectuer un retrait");
         }
         return solde;
     }

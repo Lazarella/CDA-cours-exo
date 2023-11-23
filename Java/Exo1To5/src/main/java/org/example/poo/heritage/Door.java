@@ -2,10 +2,15 @@ package org.example.poo.heritage;
 
 public class Door{
 
-    protected String color;
+    public String color;
 
-    public Door(String color) {
+    public Door(String color)
+    {
         this.color = color;
+    }
+    public Door()
+    {
+        this.color= "Blanc";
     }
 
     public String getColor() {
@@ -13,6 +18,7 @@ public class Door{
     }
 
     public void setColor(String color) {
+
         this.color = color;
     }
 

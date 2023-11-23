@@ -78,45 +78,48 @@ public class App {
         comptes.add(comptePPhilippe);
         comptes.add(comptePPhylis);
 
-//        for (CompteAbstract compte : comptes) {
-//
-//            System.out.println(compte);
-//        }
+        for (CompteAbstract compte : comptes) {
+
+            System.out.println(compte);
+        }
+
+        compteEElodie.moreMoney(100);
 
 
         Scanner scanner = new Scanner(System.in);
+        //IMH en travaux
 
-        System.out.println("\t\t***** Bienvenue au distributeur M2i\n");
-
-        System.out.println("\tQuel est votre numero de compte ?\n");
-
-        int codeClient = scanner.nextInt();
-
-        boolean compteTrouve = false;
-        int userEntry=9;
-
-        for (CompteAbstract compte : comptes) {
-            if (compte.getCode() == codeClient) { // Supposant que getNumCompte() est une méthode dans CompteAbstract
-                System.out.println("Voici vos informations");
-                System.out.println(compte);
-                compteTrouve = true;
-                break;
-            }
-        }
-
-        if (!compteTrouve) {
-            System.out.println("Numéro de compte introuvable.");
-        }else {
-            while (userEntry!=0){
-                System.out.println("01 - Retrait");
-                System.out.println("02 - Dépôt");
-
-                switch (userEntry){
-                    case 01 ->
-                        compte
-                }
-            }
-        }
+//        System.out.println("\t\t***** Bienvenue au distributeur M2i\n");
+//
+//        System.out.println("\tQuel est votre numero de compte ?\n");
+//
+//        int codeClient = scanner.nextInt();
+//
+//        boolean compteTrouve = false;
+//        int userEntry=9;
+//
+//        for (CompteAbstract compte : comptes) {
+//            if (compte.getCode() == codeClient) { // Supposant que getNumCompte() est une méthode dans CompteAbstract
+//                System.out.println("Voici vos informations");
+//                System.out.println(compte);
+//                compteTrouve = true;
+//                break;
+//            }
+//        }
+//
+//        if (!compteTrouve) {
+//            System.out.println("Numéro de compte introuvable.");
+//        }else {
+//            while (userEntry!=0){
+//                System.out.println("01 - Retrait");
+//                System.out.println("02 - Dépôt");
+//
+//                switch (userEntry){
+//                    case 01 ->
+//                        compte
+//                }
+//            }
+//        }
 
     }
 }

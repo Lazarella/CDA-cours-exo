@@ -3,7 +3,7 @@ package org.example.poo.bancaire;
 public abstract class CompteAbstract {
     protected int code;
     protected double solde;
-    public static int counter;
+    private static int counter;
 
     {
         counter ++;
@@ -15,12 +15,14 @@ public abstract class CompteAbstract {
     }
     public double moreMoney(double fee){
         solde += fee;
+        System.out.println("Votre solde est de "+solde);
         return solde;
     }
 
     public double lessMoney(double fee){
         if((solde-fee)> 0 ) {
             solde -= fee;
+            System.out.println("Votre solde est de "+solde+"€");
         }else{
             System.out.println("Vous n'avait pas assez d'argent pour effectuer un retrait");
         }
