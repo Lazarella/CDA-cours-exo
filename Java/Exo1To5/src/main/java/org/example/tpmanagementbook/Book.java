@@ -13,7 +13,7 @@ public class Book {
     protected CoverType coverType;
 
     public Book(String name, Author[] authors, Publisher publisher, int publishingYear, int nbPages, double bookPrice, CoverType coverType) {
-        this.id = getInt();
+        this.id = getId();
         this.name = name;
         this.authors = authors;
         this.publisher = publisher;
@@ -80,7 +80,7 @@ public class Book {
         this.coverType = coverType;
     }
 
-    private long getInt(){
+    private long getId(){
        id = Math.round(Math.random())*100000;
         return id;
     }
