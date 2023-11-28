@@ -1,14 +1,14 @@
 package org.example.hotel;
 
 public class Client {
-    private long id;
-    protected String firstName;
-    protected String lastName;
-    protected String phone;
-    protected String mail ;
+    private static long id;
+    private String firstName;
+    private String lastName;
+    private String phone;
+    private String mail ;
 
-    public Client(String firstName, String lastName, String phone, String mail) {
-        this.id = getId();
+    public Client(String firstName, String lastName, String phone) {
+        id = getId();
         this.firstName = firstName;
         this.lastName = lastName;
         this.phone = phone;
@@ -55,5 +55,13 @@ public class Client {
         return id;
     }
 
-
+    @Override
+    public String toString() {
+        return "Client{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", phone='" + phone + '\'' +
+                ", mail='" + mail + '\'' +
+                '}';
+    }
 }
