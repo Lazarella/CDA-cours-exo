@@ -4,7 +4,7 @@ public abstract class Book {
     private int idBook;
     private String title;
     private String author;
-    protected static int counter = 0 ;
+    private static int counter = 0 ;
     boolean isBorrowed = false;
 
     public Book(String title, String author, boolean isBorrowed) {
