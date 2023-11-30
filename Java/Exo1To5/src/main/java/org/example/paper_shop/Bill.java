@@ -1,5 +1,7 @@
 package org.example.paper_shop;
 
+import java.util.Arrays;
+
 public class Bill {
     private String client;
     private Line[] lines = new Line[10];
@@ -56,5 +58,13 @@ public class Bill {
         return total;
     }
 
-
+    @Override
+    public String toString() {
+        return "Bill{" +
+                "client='" + client + '\'' +
+                ", lines=" + Arrays.toString(lines) +
+                ", date='" + date + '\'' +
+                ", total=" + total +
+                '}';
+    }
 }

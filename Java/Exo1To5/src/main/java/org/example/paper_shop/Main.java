@@ -11,6 +11,6 @@ public class Main {
         Bill userBill = new Bill("Jean Jean",userLine, "29/11/2023");
 
         System.out.println(userBill);
-        
+
     }
 }

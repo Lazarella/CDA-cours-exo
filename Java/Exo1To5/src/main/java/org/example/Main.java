@@ -1,11 +1,14 @@
 package org.example;
 
 
+import com.github.lalyos.jfiglet.FigletFont;
 import org.example.exo3.Exo3;
 import org.example.exotableau.ExoTableau;
 
+import java.io.IOException;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         //AskName.SayMyName();
         //ReadPrice.getPrice();
@@ -38,7 +41,8 @@ public class Main {
 //        ExoTableau.ex57();
 //        ExoTableau.ex58();
 
-
+        String asciiArt = FigletFont.convertOneLine("Hello World");
+        System.out.println(asciiArt);
 
         }
     }

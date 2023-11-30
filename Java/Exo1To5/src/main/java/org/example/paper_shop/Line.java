@@ -48,6 +48,17 @@ public class Line {
             }
                 return null;
             }
+
+    @Override
+    public String toString() {
+        return "Line{" +
+                "item=" + item +
+                ", database=" + database +
+                ", quantity=" + quantity +
+                ", fullPrice=" + fullPrice +
+                ", ref=" + ref +
+                '}';
+    }
 }
 
 
