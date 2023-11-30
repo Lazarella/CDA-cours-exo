@@ -43,10 +43,14 @@ public class Main {
         //Exercice 4
 
         Compte myCompte = new Compte(6000.90f);
-        float mt = 7000f;
+        float montant = 7000f;
 
-        myCompte.retirer(mt);
+        myCompte.verser(montant);
 
-
+        try {
+            myCompte.retirer(montant);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 }

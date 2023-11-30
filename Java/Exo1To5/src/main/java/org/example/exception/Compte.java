@@ -7,7 +7,7 @@ public class Compte {
         this.solde = solde;
     }
 
-    public void retirer(float mt){
+    public void verser(float mt){
          solde = solde+mt;
      }
      public void retirer(float mt) throws MyException{
