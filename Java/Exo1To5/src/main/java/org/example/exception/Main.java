@@ -8,10 +8,10 @@ import static java.lang.Integer.parseInt;
 public class Main {
     public static void main(String[] args) {
 
-        String str = "8";
+        String str = "b";
 
         try {
-            int result = parseInt(str);
+            int result = Integer.parseInt(str); 
             System.out.println("Résultat : " + result);
         } catch (NumberFormatException e){
             System.out.println("Vous n'avez pas entré un nombre!!!");
