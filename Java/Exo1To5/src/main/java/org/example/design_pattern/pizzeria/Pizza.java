@@ -1,5 +1,6 @@
 package org.example.design_pattern.pizzeria;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Pizza {
@@ -11,6 +12,10 @@ public class Pizza {
 
     private Pizza(Builder builder) {
         this.tailleDePizza = builder.tailleDePizza;
+        this.pate = builder.pate;
+        this.sauce = builder.sauce;
+        this.fromage = builder.fromage;
+        this.garniture = builder.garniture;
 
     }
 
@@ -18,8 +23,8 @@ public class Pizza {
         private TailleDePizza tailleDePizza;
         private Pate pate;
         private Sauce sauce;
-        private List<Fromage> fromage;
-        private List<Garniture> garniture;
+        private List<Fromage> fromage = new ArrayList<>();
+        private List<Garniture> garniture = new ArrayList<>();
 
 
         public Builder tailleDePizza(TailleDePizza tailleDePizza) {
@@ -37,21 +42,23 @@ public class Pizza {
             return this;
         }
 
-        public Builder fromage(List<Fromage> fromage) {
-            this.fromage = fromage;
-            return this;
-        }
+//        public Builder fromage(List<Fromage> fromage) {
+//            this.fromage = fromage;
+//            return this;
+//        }
 
-        public Builder garniture(List<Garniture> garniture) {
-            this.garniture = garniture;
-            return this;
-        }
+//        public Builder garniture(List<Garniture> garniture) {
+//            this.garniture = garniture;
+//            return this;
+//        }
         public Pizza build(){return new Pizza(this);}
-        }
+
+    }
     public Pizza fromage(Fromage fromage) {
         this.fromage.add(fromage);
         return this;
-    }public Pizza garniture(Garniture garniture) {
+    }
+    public Pizza garniture(Garniture garniture) {
         this.garniture.add(garniture);
         return this;
     }

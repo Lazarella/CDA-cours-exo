@@ -9,8 +9,8 @@ public class Main {
                 .tailleDePizza(TailleDePizza.GRANDE)
                 .pate(Pate.CLASSIQUE)
                 .sauce(Sauce.BARBECUE)
-                .fromage(Collections.singletonList(Fromage.CHEDDAR))
-                .garniture(Collections.singletonList(Garniture.PEPPERONI))
+                .fromage(Fromage.SANS_FROMAGE)
+                .garniture(Garniture.PEPPERONI)
                 .garniture(Collections.singletonList(Garniture.POIVRON))
                 .build();
         System.out.println(pizzaA);
