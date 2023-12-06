@@ -6,7 +6,7 @@ import java.sql.SQLOutput;
 
 public class HouseFactory extends BuildFactory {
 
-    private int villagers = 5 ;
+    private int villagers ;
 
     public int getVillagers() {
         return villagers;

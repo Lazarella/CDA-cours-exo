@@ -5,27 +5,29 @@ public class University extends BuildFactory {
     @Override
     NameBuilding createName() {
         System.out.println("L'Université du Savoir");
-        return null;
+        return new UniversityName();
     }
 
     @Override
     PriceBuilding createPriceBuilding() {
-        return null;
+
+        return new UniversityPrice();
     }
 
     @Override
-    PointValue int createGamerPoint() {
-        return int point = 25;
-    }
+    PointValue createGamerPoint() {
+        return new UniversityValue() ; }
 
     @Override
     Type getType() {
+
         return null;
     }
 
     @Override
     levelBuilding level() {
-        return null;
+
+        return new UniversityLevel();
     }
 
     @Override
