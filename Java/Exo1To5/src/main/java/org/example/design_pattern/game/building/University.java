@@ -25,7 +25,7 @@ public class University extends BuildFactory {
     }
 
     @Override
-    levelBuilding level() {
+    LevelBuilding level() {
 
         return new UniversityLevel();
     }

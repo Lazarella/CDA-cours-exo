@@ -1,7 +1,6 @@
 package org.example.design_pattern.game.realm;
 
-import org.example.design_pattern.game.building.BuildFactory;
-import org.example.design_pattern.game.character.PlayerBuildings;
+import org.example.design_pattern.game.building.PlayerBuildings;
 import org.example.design_pattern.game.character.PlayerCharacter;
 
 import java.util.ArrayList;

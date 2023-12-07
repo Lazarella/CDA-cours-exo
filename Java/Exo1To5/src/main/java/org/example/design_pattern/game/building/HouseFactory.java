@@ -1,9 +1,5 @@
 package org.example.design_pattern.game.building;
 
-import org.example.design_pattern.pizzeria.Garniture;
-
-import java.sql.SQLOutput;
-
 public class HouseFactory extends BuildFactory {
 
     private int villagers ;
@@ -34,7 +30,7 @@ public class HouseFactory extends BuildFactory {
     }
 
     @Override
-    levelBuilding level() {
+    LevelBuilding level() {
         return new HouseLevel();
     }
 

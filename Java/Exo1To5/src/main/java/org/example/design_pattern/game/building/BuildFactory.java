@@ -6,6 +6,6 @@ public abstract class BuildFactory {
     abstract PriceBuilding createPriceBuilding();
     abstract  PointValue createGamerPoint();
     abstract Type getType();
-    abstract levelBuilding level();
+    abstract LevelBuilding level();
     abstract  boolean isBeautiful();
 }
