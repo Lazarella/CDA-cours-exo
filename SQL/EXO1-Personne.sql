@@ -53,6 +53,14 @@ telephone = '0666666666'
 WHERE 
 nom = 'Conor'; 
 
+SELECT * FROM personne ORDER BY nom DESC, prenom DESC; 
+
+SELECT * FROM personne ORDER BY titre_personne;
+
+   SELECT nom, prenom 
+    FROM personne
+    WHERE email =  'sarah.conor@gmail.com'; 
+
 
 
 

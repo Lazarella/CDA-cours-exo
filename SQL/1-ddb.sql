@@ -63,3 +63,4 @@ ALTER TABLE service
 -- Modifier la colonne en type DATE 
 ALTER TABLE service
 	MODIFY COLUMN date_modification DATE; 
+    

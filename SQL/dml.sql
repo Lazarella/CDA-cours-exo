@@ -108,4 +108,20 @@ SELECT * FROM salarie LIMIT 2;
 
 SELECT * FROM salarie ORDER BY non; 
 
+-- Requettes imbriquées
+ SELECT non, prenom
+ FROM (SELECT * FROM salarie WHERE prenom LIKE 'j%')AS nom_en_r
+ WHERE age > 35; 
+ 
+ SELECT service_id, COUNT(service_id) AS "nombre de salariés" FROM salarie GROUP BY service_id; 
+ 
+ SELECT * FROM salarie WHERE prenom = "jean-jean"; 
+ 
+ SELECT * FROM salarie WHERE salarie_id = 2; -- recherche par colonne index plus efficace
+ 
+SELECT service_id, AVG(salaire) FROM salarie GROUP BY service_id HAVING AVG(salaire) > 3000; 
+
+
+
+
 
