@@ -189,10 +189,11 @@ DEFAULT CHARACTER SET = utf8mb3;
 -- Requêtes vérification des enregistrements
 
 SELECT * FROM Payments;
+SELECT * FROM Customers; 
 
 /***********************************************/
 
--- Question 1 : Afficher les noms, prénoms et titres de l’ensemble des employées en les ordonnant par leurs noms de famille.
+-- Question 1 : Afficher les noms, prénoms et titres de l’ensemble des employées en les ordonnant par leurs noms de famille
 
 SELECT lastname, firstname, jobTitle
 FROM Employees
@@ -203,14 +204,13 @@ ORDER BY lastname;
 SELECT DISTINCT lastname
 FROM Employees;
 
--- Question 3 : Sélectionner et afficher le nom de la société, le prénom et le nom du contact des clients qui habitent aux USA.
+-- Question 3 : Sélectionner et afficher le nom de la société, le prénom et le nom du contact des clients qui habitent aux USA
 
-SELECT customerName, salesRepEmployeeNumber, Employees.lastName, Employees.firstName
-FROM Customers
-INNER JOIN Employees ON salesRepEmployeeNumber = employeeNumber 
+SELECT customerName, contactLastname, contactFirstname
+FROM Customers 
 WHERE country LIKE 'USA';
 
--- Question 4 : Sélectionner les emails des employées qui ont un firstname qui se termine par 'y' et qui ont un reportsTo qui commence par '105'.
+-- Question 4 : Sélectionner les emails des employées qui ont un firstname qui se termine par 'y' et qui ont un reportsTo qui commence par '105'
 
 SELECT email
 FROM Employees
@@ -242,13 +242,115 @@ INNER JOIN Payments ON Payments.customerNumber = Customers.customerNumber
 GROUP BY Customers.customerNumber
 HAVING TotalAmountPaid > 100000;
 
+-- Réponse formateur 
+
+SELECT DISTINCT ( SELECT customerName from customers WHERE customerNumber = pay.customerNumber)
+FROM payments As pay 
+WHERE amount > 10000; 
 
 -- Question 9 : Afficher le total des ventes par 'orderNumber' et 'status'
 
-SELECT count(quantityOrdered*priceEach ) AS total_sellings
+SELECT Orders.orderNumber, Orders.status, SUM(OrderDetails.quantityOrdered * OrderDetails.priceEach) AS total_sales
 FROM OrderDetails
 INNER JOIN Orders ON Orders.orderNumber = OrderDetails.orderNumber
-ORDER BY Orders.status AND  OrderDetails.orderNumber; 
+GROUP BY Orders.orderNumber, Orders.status
+ORDER BY Orders.orderNumber, Orders.status;
 
+-- Question 10 :  Afficher les “orderNumber”, “productName”, “msrp”, “priceEach” des produits qui un productcode = ‘S10_1678’ ont un msrp supérieur au priceEach
 
+SELECT orderNumber, productName, msrp, priceEach
+FROM OrderDetails
+INNER JOIN Products ON OrderDetails.productCode = Products.productCode
+WHERE Products.productCode LIKE 'S10_1678' AND msrp > priceEach;
+
+-- Question 11 :  Sélectionner les emails des employées qui ont un firstname qui se termine par 'y' ou qui appartiennent à au bureau de San Francisco.
+
+SELECT email
+FROM Employees
+JOIN Offices ON Employees.officeCode = Offices.officeCode
+WHERE firstname LIKE '%y' OR officeLocation = 'San Francisco';
+
+-- Question 12 :  Donner le nombre de client qui sont gérés par Leslie Jennings
+
+SELECT count(customerName)
+FROM Customers 
+JOIN Employees ON  employeeNumber = salesRepEmployeeNumber
+WHERE firstname LIKE 'Leslie' AND lastname LIKE 'Jennings';
+
+-- Question 13 : Afficher le nom et prénom de la personne qui a le jobTitle de Président
+
+SELECT jobTitle 
+FROM Employees
+ORDER BY jobTitle DESC;
+
+SELECT firstname, lastname
+FROM Employees
+WHERE jobTitle LIKE 'President';
+
+-- Question 14 : Donner la somme des montants des paiements reçu pendant le mois de Mars 2005
+
+SELECT sum(paymentDate), paymentDate 
+FROM Payments
+WHERE paymentDate LIKE '2005-05-__ 00:00:00'
+GROUP BY paymentDate; 
+
+-- Question 15 : Afficher le total des paiements par nom des clients
+
+SELECT sum(amount), customerName 
+FROM Payments
+INNER JOIN Customers ON Customers.customerNumber= Payments.customerNumber
+GROUP BY Payments.customerNumber; 
+
+-- Question 16 : Afficher la date de commande et le numéro client des commandes annulées
+
+SELECT * FROM Orders; 
+
+SELECT orderDate, customerNumber
+FROM Orders
+WHERE status LIKE 'Cancelled'; 
+
+-- Question 17 :  Afficher la liste (prénom et nom ) des subordonnées de Bow Anthony
+
+SELECT lastName, firstname
+FROM Employees AS e
+WHERE e.reportsTo
+IN (
+	SELECT employeeNumber FROM employees WHERE lastName = "Bow" AND firstName = "Anthony"
+    )
+    ;
+
+-- Question 18 : Afficher le nom et le prénom du ou des employés qui n'ont pas de supérieur hiérarchique
+
+SELECT firstName, lastName
+FROM Employees 
+WHERE reportsTo IS NULL;
+
+-- Question 19 :  Dans le detail des commandes afficher la commande avec la plus petite quantité
+
+SELECT *
+FROM OrderDetails
+WHERE quantityOrdered = (SELECT MIN(quantityOrdered) FROM OrderDetails);
+
+-- Question 20 : Afficher le detail de la commande qui est datée du 21-04-2003
+
+SELECT *
+FROM OrderDetails
+INNER JOIN Orders ON  Orders.orderNumber = OrderDetails.orderNumber 
+WHERE orderDate LIKE '2003-04-21 00:00:00'; 
+
+-- Question 21 :  Afficher la liste des managers avec les employées qu’ils managent. Le nom
+-- de la colonne s’appellera ‘Manager’ pour la colonne des managers, elle
+-- regroupera leurs noms et prénoms. Idem pour la colonne employée, elle
+-- s’appellera ‘Employée’, elle affichera le nom et prénom des employés.
+
+SELECT CONCAT(m.firstName, ' ', m.lastName) AS Manager, CONCAT(e.firstName, ' ', e.lastName) AS Employee
+FROM Employees e
+INNER JOIN Employees m ON e.reportsTo = m.employeeNumber;
+
+-- Question 22 : Afficher le nom des managers et le nombre d’employé qu’ils managent
+
+SELECT m.lastName, m.firstname, COUNT(e.reportsTo)
+FROM Employees e
+INNER JOIN Employees m ON e.reportsTo = m.employeeNumber
+GROUP BY m.lastname,m.firstname ;
 
