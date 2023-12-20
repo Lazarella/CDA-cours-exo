@@ -6,12 +6,13 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class ClientDAO extends BaseDAO{
-
+public class ClientDAO extends BaseDAO<Client>{
 
     public ClientDAO(Connection connection) {
         super(connection);
     }
+
+
 
     @Override
     public boolean save(Client element) throws SQLException {
@@ -29,8 +30,24 @@ public class ClientDAO extends BaseDAO{
     }
 
     @Override
-    public Object get(int id) throws SQLException {
-        return null;
+    public boolean update(Client element) throws SQLException {
+        return false;
+    }
+
+    @Override
+    public Client get(int id) throws SQLException {
+        Client client = null;
+        request = "Select * FROM clients WHERE id = ? ";
+        statement = _connection.prepareStatement(request);
+        statement.setInt(1, id);
+        resultSet = statement.executeQuery();
+        if (resultSet.next()) {
+            client = new Client(
+                    resultSet.getString("first_name"),
+                    resultSet.getString("last_name"),
+                    resultSet.getString("telephone"));
+        }
+        return client;
     }
 
 }

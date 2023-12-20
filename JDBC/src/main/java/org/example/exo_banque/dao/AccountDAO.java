@@ -5,9 +5,8 @@ import org.example.exo_banque.model.Account;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.List;
 
-public class AccountDAO extends BaseDAO {
+public class AccountDAO extends BaseDAO <Account>{
 
     public AccountDAO(Connection connection) {
         super(connection);
@@ -39,19 +38,20 @@ public class AccountDAO extends BaseDAO {
     @Override
     public Account get(int id) throws SQLException {
         Account account = null;
-        request = "Select * INTO account WHERE id = ? ";
+        request = "Select * FROM accounts WHERE id = ? ";
         statement = _connection.prepareStatement(request);
         statement.setInt(1, id);
         resultSet = statement.executeQuery();
-        if(resultSet.next()){
+        if (resultSet.next()) {
             account = new Account(resultSet.getInt("id"),
-                    resultSet.getDouble("balance"));
+                    resultSet.getInt("client_id"));
         }
-        return person;
-
-    public List<Account> get_clientId() {
-
-        return _clientId;
+        return account;
     }
+
+//    public List<Account> get_clientId() {
+//
+//        return _clientId;
+//    }
 }
 

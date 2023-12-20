@@ -36,7 +36,7 @@ public class ClientService {
 
     public Client getClient(int id){
         try {
-            return ClientDAO.get(id);
+             return clientDAO.get(id);
         }catch (SQLException e) {
             throw new RuntimeException(e);
         }

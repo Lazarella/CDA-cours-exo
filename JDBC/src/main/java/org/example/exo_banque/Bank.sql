@@ -9,17 +9,16 @@ telephone VARCHAR(10)
 );
 
 CREATE TABLE IF NOT EXISTS accounts(
-id INT AUTO_INCREMENT PRIMARY KEY, 
+id_account INT AUTO_INCREMENT PRIMARY KEY, 
 balance DOUBLE, 
 id_client INT,
-FOREIGN KEY (id_client) REFERENCES id(clients) 
+FOREIGN KEY (id_client) REFERENCES clients(id) 
 );
 
 CREATE TABLE IF NOT EXISTS transactions(
-number int AUTO_INCREMENT,
 amount DOUBLE, 
 -- id_client INT,
-id_account INT, 
-PRIMARY KEY (id_account),
-FOREIGN KEY (id_account) REFERENCES id(accounts)
+num INT, 
+PRIMARY KEY (num),
+FOREIGN KEY (num) REFERENCES accounts(id_account)
 ); 
