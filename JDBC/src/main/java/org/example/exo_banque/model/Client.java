@@ -1,11 +1,25 @@
 package org.example.exo_banque.model;
 
+import java.util.List;
+
 public class Client {
 
     private int id;
     private String firstName;
     private String lastName;
     private String telephone;
+    private List<Account> listAccount;
+
+    public List<Account> getListAccount() {
+        return listAccount;
+    }
+
+    public Client(String firstName, String lastName, String telephone, List<Account> listAccount) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.telephone = telephone;
+        this.listAccount = listAccount;
+    }
 
     public Client(String firstName, String lastName, String telephone) {
         this.firstName = firstName;

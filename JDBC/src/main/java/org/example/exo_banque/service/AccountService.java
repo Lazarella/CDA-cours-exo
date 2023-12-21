@@ -48,12 +48,12 @@ public class AccountService {
         }
     }
 
-    public List<Account> getAllPersons(){
-        try {
-            return accountDAO.get_clientId();
-        }catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
+//    public List<Account> getAllPersons(){
+//        try {
+//            return accountDAO.get_clientId();
+//        }catch (SQLException e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
 
 }

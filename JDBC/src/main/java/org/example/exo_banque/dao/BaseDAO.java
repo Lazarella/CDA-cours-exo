@@ -1,8 +1,6 @@
 package org.example.exo_banque.dao;
 
-import org.example.exo_banque.model.Account;
-import org.example.exo_banque.model.Client;
-import org.example.exo_banque.model.Status;
+import jdk.jshell.spi.ExecutionControl;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -20,12 +18,11 @@ public abstract class BaseDAO<T> {
     }
 
 
-        public abstract boolean save(T element) throws SQLException;
+        public abstract boolean save(T element) throws Exception;
 
-        public abstract boolean update(T element) throws SQLException;
+        public abstract boolean update(T element) throws SQLException, ExecutionControl.NotImplementedException;
 
 
-    public abstract T get(int id) throws SQLException;
+    public abstract T get(int id) throws Exception;
 
     }
-}

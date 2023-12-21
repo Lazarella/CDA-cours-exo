@@ -1,5 +1,6 @@
 package org.example.exo_banque.utils;
 
+import org.example.exo_banque.model.Client;
 import org.example.exo_banque.service.AccountService;
 import org.example.exo_banque.service.ClientService;
 
@@ -36,11 +37,15 @@ public class IHM {
 
 
     }
-       private static void createUser(){
-            System.out.print("Nom  : ");
+       private static int createUser(){
+            System.out.print("Prénom  : ");
             String firstName = scanner.nextLine();
-            System.out.print("Prenom : ");
+            System.out.print("Nom : ");
             String lastName = scanner.nextLine();
+           System.out.print("Téléphone : ");
+           String telephone = scanner.nextLine();
+           Client client = clientService.createClient(firstName, lastName, telephone);
+           return client.getId();
         }
         private static void createAccount(){
 

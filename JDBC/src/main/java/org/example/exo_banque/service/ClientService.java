@@ -6,7 +6,6 @@ import org.example.exo_banque.model.Client;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.List;
 
 public class ClientService {
     private ClientDAO clientDAO;
@@ -21,7 +20,7 @@ public class ClientService {
         }
     }
 
-    public boolean createClient(String firstName,String lastName, String telephone){
+    public boolean createClient(String firstName, String lastName, String telephone){
        Client client = new Client(firstName, lastName, telephone);
         client.setFirstName(firstName);
         client.setLastName(lastName);

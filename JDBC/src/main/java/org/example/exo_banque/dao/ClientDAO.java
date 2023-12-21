@@ -1,5 +1,6 @@
 package org.example.exo_banque.dao;
 
+import jdk.jshell.spi.ExecutionControl;
 import org.example.exo_banque.model.Client;
 
 import java.sql.Connection;
@@ -11,8 +12,6 @@ public class ClientDAO extends BaseDAO<Client>{
     public ClientDAO(Connection connection) {
         super(connection);
     }
-
-
 
     @Override
     public boolean save(Client element) throws SQLException {
@@ -30,8 +29,8 @@ public class ClientDAO extends BaseDAO<Client>{
     }
 
     @Override
-    public boolean update(Client element) throws SQLException {
-        return false;
+    public boolean update(Client element) throws SQLException, ExecutionControl.NotImplementedException {
+        throw  new ExecutionControl.NotImplementedException("Méthode à implémenter");
     }
 
     @Override
