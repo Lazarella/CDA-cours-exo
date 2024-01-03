@@ -12,7 +12,9 @@ public abstract class BaseDAO <T>{
     public abstract T getById(int id) throws Exception;
 
 
-    public abstract void isDone(int id, boolean done);
+    public abstract void isDone(T element, T e);
+
+    public abstract void isDone(Long id, boolean done);
 
     public abstract List<T> get() throws Exception;
 

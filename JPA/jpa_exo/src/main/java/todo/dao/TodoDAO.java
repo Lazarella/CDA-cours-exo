@@ -42,7 +42,7 @@ public class TodoDAO extends BaseDAO <Todo>{
     }
 
     @Override
-    public Todo getById(int id) throws SQLException {
+    public Todo getById(Long id) throws SQLException {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
         Todo todo = em.find(Todo.class,id);
@@ -53,7 +53,7 @@ public class TodoDAO extends BaseDAO <Todo>{
     }
 
     @Override
-    public void isDone(int id, boolean done) {
+    public void isDone(Long id, boolean done) {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
         em.getTransaction().commit();

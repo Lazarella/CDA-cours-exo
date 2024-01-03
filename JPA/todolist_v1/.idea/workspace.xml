@@ -4,17 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3b2eb82-29f6-4b96-9df7-d629235970d6" name="Changes" comment="">
+    <list default="true" id="1cb205f1-2d92-4ae2-b835-5225e248f1a0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../exercices_jpa/.idea/exercices_jpa.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../exercices_jpa/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../exercices_jpa/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../exercices_jpa/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../exercices_jpa/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../exercices_jpa/exercice1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/todo/controller/ControllerTodo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/todo/controller/ControllerTodo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/todo/dao/BaseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/todo/dao/BaseDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/todo/dao/TodoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/todo/dao/TodoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa_exo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa_exo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa_exo/src/main/java/todo/controller/ControllerTodo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa_exo/src/main/java/todo/controller/ControllerTodo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa_exo/src/main/java/todo/dao/BaseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa_exo/src/main/java/todo/dao/BaseDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa_exo/src/main/java/todo/dao/TodoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa_exo/src/main/java/todo/dao/TodoDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +24,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -34,10 +35,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 1
-}</component>
-  <component name="ProjectId" id="2aPBs0gEFjW4PcJIXt84g4OFQFp" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2aRv1TL2YM37gkjK6jDiBI72rp9" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
@@ -51,7 +52,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "School",
-    "last_opened_file_path": "C:/MonRepo/CDA-cours-exo/JPA/todolist_v1",
+    "last_opened_file_path": "C:/MonRepo/CDA-cours-exo/JPA/todolist_v1/target",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -60,20 +61,22 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\MonRepo\CDA-cours-exo\JPA\todolist_v1\target" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\MonRepo\CDA-cours-exo\JPA\jpa_exo\src\main\java\todo" />
+      <recent name="C:\MonRepo\CDA-cours-exo\JPA\todolist_v1" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b3b2eb82-29f6-4b96-9df7-d629235970d6" name="Changes" comment="" />
-      <created>1704210538525</created>
+      <changelist id="1cb205f1-2d92-4ae2-b835-5225e248f1a0" name="Changes" comment="" />
+      <created>1704293991198</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1704210538525</updated>
-      <workItem from="1704210539583" duration="2488000" />
-      <workItem from="1704266972147" duration="8325000" />
+      <updated>1704293991198</updated>
+      <workItem from="1704293992219" duration="5247000" />
     </task>
     <servers />
   </component>
