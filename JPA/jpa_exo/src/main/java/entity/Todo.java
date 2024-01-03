@@ -12,6 +12,7 @@ public class Todo {
     private Long id;
     private String title;
     private String description;
+    private boolean isDone = false;
 
     public Todo(String title, String description) {
         this.title = title;
@@ -43,6 +44,15 @@ public class Todo {
 
     public Long getId() {
         return id;
+    }
+
+    public boolean isDone() {
+        return isDone;
+    }
+
+    public boolean setDone(boolean done) {
+        isDone = done;
+        return done;
     }
 
     @Override
