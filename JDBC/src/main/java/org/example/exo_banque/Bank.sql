@@ -22,3 +22,5 @@ num INT,
 PRIMARY KEY (num),
 FOREIGN KEY (num) REFERENCES accounts(id_account)
 ); 
+
+SELECT * FROM clients;

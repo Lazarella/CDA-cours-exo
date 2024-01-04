@@ -1,5 +1,6 @@
 package org.example.controller;
 
+import org.example.dao.UserDAO;
 import org.example.impl.TaskDAOImpl;
 import org.example.impl.UserDAOImpl;
 import org.example.model.Task;
@@ -247,6 +248,21 @@ public class ToDoListAppConsoleV3 {
         };
 
         private static void displayUserTask(Scanner scanner){
+            System.out.println("veuillez entrer l'identifiant de l'utilisateur ");
+            Long idUser = scanner.nextLong();
+
+            List <Task> tasks = (List<Task>) userDAO.getTaskByUser(idUser);
+
+                if (tasks != null && !tasks.isEmpty()){
+                    System.out.println("Voici les tâches de l'utilisateur "+ idUser );
+                    for (Task t : tasks
+                         ) {
+                        System.out.println(t.getTitle());
+                        System.out.println(t.getTaskInfo().getDescription());
+                        System.out.println((t.getTaskInfo().getPriority()));
+                    }
+                }
+
 
         }
 }
