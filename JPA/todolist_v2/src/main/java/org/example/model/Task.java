@@ -9,16 +9,22 @@ public class Task {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id_task")
     private Long id;
-    @Column(nullable=false)
+
     private String title;
     private boolean completed;
 
-    @OneToOne(mappedBy = "task", cascade = CascadeType.ALL, orphanRemoval = true)
-    private InfoTask infoTask;
+    @OneToOne(mappedBy ="task", cascade = { CascadeType.REMOVE, CascadeType.PERSIST })
+    private TaskInfo taskInfo;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     public Task() {
+    }
+
+    public Task(String title) {
+        this.title = title;
     }
 
     public Long getId() {
@@ -43,5 +49,13 @@ public class Task {
 
     public void setCompleted(boolean completed) {
         this.completed = completed;
+    }
+
+    public TaskInfo getTaskInfo() {
+        return taskInfo;
+    }
+
+    public void setTaskInfo(TaskInfo taskInfo) {
+        this.taskInfo = taskInfo;
     }
 }

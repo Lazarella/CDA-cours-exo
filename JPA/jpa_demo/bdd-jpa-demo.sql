@@ -1,1 +1,0 @@
-create DATABASE if not EXISTS demo_jpa; 

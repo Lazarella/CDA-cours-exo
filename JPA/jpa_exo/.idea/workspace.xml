@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3b2eb82-29f6-4b96-9df7-d629235970d6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../exercices_jpa/.idea/exercices_jpa.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercices_jpa/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercices_jpa/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercices_jpa/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercices_jpa/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercices_jpa/exercice1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/todo/controller/ControllerTodo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/todo/controller/ControllerTodo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/todo/dao/BaseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/todo/dao/BaseDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/todo/dao/TodoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/todo/dao/TodoDAO.java" afterDir="false" />
-    </list>
+    <list default="true" id="b3b2eb82-29f6-4b96-9df7-d629235970d6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,20 +34,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "School",
-    "last_opened_file_path": "C:/MonRepo/CDA-cours-exo/JPA/todolist_v1",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;School&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/MonRepo/CDA-cours-exo/JPA/todolist_v1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\MonRepo\CDA-cours-exo\JPA\jpa_exo\src\main\java\todo" />
@@ -74,6 +63,7 @@
       <updated>1704210538525</updated>
       <workItem from="1704210539583" duration="2488000" />
       <workItem from="1704266972147" duration="8325000" />
+      <workItem from="1704353777904" duration="105000" />
     </task>
     <servers />
   </component>

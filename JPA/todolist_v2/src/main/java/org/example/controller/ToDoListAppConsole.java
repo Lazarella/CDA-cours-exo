@@ -1,15 +1,13 @@
 package org.example.controller;
 
-import org.example.impl.InfoTaskDAOImpl;
 import org.example.impl.TaskDAOImpl;
-import org.example.model.InfoTask;
-import org.example.model.Priority;
 import org.example.model.Task;
+import org.example.model.TaskInfo;
 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import java.sql.Date;
-import java.sql.SQLOutput;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Scanner;
 
@@ -17,7 +15,6 @@ public class ToDoListAppConsole {
 
     private static EntityManagerFactory entityManagerFactory;
     private static TaskDAOImpl taskDAO;
-    //private static InfoTaskDAOImpl infoTaskDao;
 
     public static void main() {
         entityManagerFactory = Persistence.createEntityManagerFactory("jpa_exo");
@@ -62,15 +59,34 @@ public class ToDoListAppConsole {
 
         }while (choice != 5);
     }
+
     private static void addTask(Scanner scanner){
         System.out.println("Entrer le titre de la tâche : ");
         String title = scanner.nextLine();
 
+        System.out.println("Entrer la description de la tâche : ");
+        String description = scanner.nextLine();
+
+        System.out.println("Date limite de la tâche : (dd.MM.yyyy)");
+        String dueDateStr = scanner.nextLine();
+
+        LocalDate dueDate = LocalDate.parse(dueDateStr, DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+
+        System.out.println("Priorité de la tâche : ");
+        int priority = scanner.nextInt();
+        scanner.nextLine();
+
+        // Creation de la tache
         Task task = new Task();
         task.setTitle(title);
         task.setCompleted(false);
 
-        addTaskInfo();
+        //Creation de la taskinfo
+        TaskInfo taskInfo = new TaskInfo(description,dueDate,priority);
+
+        // Mise en relation
+        task.setTaskInfo(taskInfo);
+        taskInfo.setTask(task);
 
         if(taskDAO.addTask(task)){
             System.out.println("Tâche ajoutée avec succès !");
@@ -87,7 +103,10 @@ public class ToDoListAppConsole {
         } else {
             System.out.println("=== Liste des tâches ===");
             for (Task task : tasks) {
+                System.out.println("###########");
                 System.out.println(task.getId() + ". " + task.getTitle() + " (" + (task.isCompleted() ? "Terminée" : "En cours") + ")");
+                System.out.println(task.getTaskInfo().toString());
+                System.out.println("###########");
             }
         }
     }
@@ -114,30 +133,5 @@ public class ToDoListAppConsole {
         }else {
             System.out.println("Erreur");
         }
-    }
-    private static void addTaskInfo(Scanner scanner){
-        InfoTask infoTask = new InfoTask();
-
-        System.out.println("Entrez la description de la tâche à réaliser ");
-        String description = scanner.nextLine();
-        System.out.println("Entrez l'échéance");
-        Date dueDate = Date.valueOf(scanner.next());
-        System.out.println("Veuillez renseigner une priorité : \n1 • Aucune \n2 • Moyenne\n3 • Urgent\n4 • Defcon 5");
-        int choice = scanner.nextInt();
-        infoTask.setDescription(description);
-
-    switch(choice){
-        case 1 -> infoTask.setPriority(Priority.NONE);
-        case 2 -> infoTask.setPriority(Priority.AVERAGE);
-        case 3 -> infoTask.setPriority(Priority.URGENT);
-        case 4 -> infoTask.setPriority(Priority.DEFCON_FIVE);
-    }
-    }
-
-    private static void addDate(Scanner scanner){
-
-    }
-    private static void addPriority(Scanner scanner){
-
     }
 }

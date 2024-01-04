@@ -28,7 +28,8 @@ public class TaskDAOImpl implements TaskDAO <Task> {
         }catch (Exception e){
             if(transaction.isActive()){
                 transaction.rollback();
-            }
+            }0
+
             e.printStackTrace();
             return false;
         }finally {
