@@ -54,21 +54,21 @@ public class Main {
 //            session.save(creditCardPayment1);
 //            session.save(payPalPayment1);
 
-            CreditCardPayment2 creditCardPayment2 = new CreditCardPayment2();
-            creditCardPayment2.setCardNumber("258369147");
-            creditCardPayment2.setPaymentDate(new Date());
-            creditCardPayment2.setExpirationDate("19/03/2025");
-
-            PayPalPayment2 payPalPayment2 = new PayPalPayment2();
-            payPalPayment2.setAccountNumber("22321654987");
-            payPalPayment2.setAmount(1789.45);
-            payPalPayment2.setPaymentDate(new Date());
-
-            session.save(creditCardPayment2);
-            session.save(payPalPayment2);
-
-            System.out.println(creditCardPayment2.toString());
-            System.out.println(payPalPayment2.toString());
+//            CreditCardPayment2 creditCardPayment2 = new CreditCardPayment2();
+//            creditCardPayment2.setCardNumber("258369147");
+//            creditCardPayment2.setPaymentDate(new Date());
+//            creditCardPayment2.setExpirationDate("19/03/2025");
+//
+//            PayPalPayment2 payPalPayment2 = new PayPalPayment2();
+//            payPalPayment2.setAccountNumber("22321654987");
+//            payPalPayment2.setAmount(1789.45);
+//            payPalPayment2.setPaymentDate(new Date());
+//
+//            session.save(creditCardPayment2);
+//            session.save(payPalPayment2);
+//
+//            System.out.println(creditCardPayment2.toString());
+//            System.out.println(payPalPayment2.toString());
 
             transac.commit();
 

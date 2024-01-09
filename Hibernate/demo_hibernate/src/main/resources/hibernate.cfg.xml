@@ -18,6 +18,10 @@
         <mapping class = "heritage.table_per_class.CreditCardPayment2"/>
         <mapping class = "heritage.table_per_class.PayPalPayment2"/>
         <mapping class = "heritage.table_per_class.Payment2"/>
+
+        <mapping class = "demo.model.Person"/>
+
+        <mapping class ="exo.exo1.model.Produit"/>
 <!-- ↑ CLASSPATH à déclarer manuellement-->
     </session-factory>
 
