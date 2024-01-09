@@ -2,6 +2,8 @@ import heritage.joined_table.CreditCardPayment;
 import heritage.joined_table.PayPalPayment;
 import heritage.single_table.CreditCardPayment1;
 import heritage.single_table.PayPalPayment1;
+import heritage.table_per_class.CreditCardPayment2;
+import heritage.table_per_class.PayPalPayment2;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -39,21 +41,34 @@ public class Main {
 //            session.save(payPalPayment);
 //            session.save(creditCardPayment);
 
-            CreditCardPayment1 creditCardPayment1 = new CreditCardPayment1();
-            creditCardPayment1.setCardNumber("741852963");
-            creditCardPayment1.setPaymentDate(new Date());
-            creditCardPayment1.setExpirationDate("19/03/2026");
+//            CreditCardPayment1 creditCardPayment1 = new CreditCardPayment1();
+//            creditCardPayment1.setCardNumber("741852963");
+//            creditCardPayment1.setPaymentDate(new Date());
+//            creditCardPayment1.setExpirationDate("19/03/2026");
+//
+//            PayPalPayment1 payPalPayment1 = new PayPalPayment1();
+//            payPalPayment1.setAccountNumber("321654987");
+//            payPalPayment1.setAmount(789.45);
+//            payPalPayment1.setPaymentDate(new Date());
+//
+//            session.save(creditCardPayment1);
+//            session.save(payPalPayment1);
 
-            PayPalPayment1 payPalPayment1 = new PayPalPayment1();
-            payPalPayment1.setAccountNumber("321654987");
-            payPalPayment1.setAmount(789.45);
-            payPalPayment1.setPaymentDate(new Date());
+            CreditCardPayment2 creditCardPayment2 = new CreditCardPayment2();
+            creditCardPayment2.setCardNumber("258369147");
+            creditCardPayment2.setPaymentDate(new Date());
+            creditCardPayment2.setExpirationDate("19/03/2025");
 
-            session.save(creditCardPayment1);
-            session.save(payPalPayment1);
+            PayPalPayment2 payPalPayment2 = new PayPalPayment2();
+            payPalPayment2.setAccountNumber("22321654987");
+            payPalPayment2.setAmount(1789.45);
+            payPalPayment2.setPaymentDate(new Date());
 
-            System.out.println(creditCardPayment1.toString());
-            System.out.println(payPalPayment1.toString());
+            session.save(creditCardPayment2);
+            session.save(payPalPayment2);
+
+            System.out.println(creditCardPayment2.toString());
+            System.out.println(payPalPayment2.toString());
 
             transac.commit();
 
