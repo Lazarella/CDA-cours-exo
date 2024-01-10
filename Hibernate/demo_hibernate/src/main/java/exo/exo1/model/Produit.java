@@ -2,6 +2,7 @@ package exo.exo1.model;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name="produit")
@@ -15,6 +16,11 @@ public class Produit {
     private Date dateAchat;
     private Double prix;
     private int stock;
+    @OneToMany(mappedBy = "produit", cascade= CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Picture> pictures;
+
+    @OneToMany(mappedBy ="produit", cascade=CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Comment> comments;
 
     public Produit() {
     }
@@ -65,6 +71,22 @@ public class Produit {
 
     public Long getId() {
         return id;
+    }
+
+    public List<Picture> getPictures() {
+        return pictures;
+    }
+
+    public void setPictures(List<Picture> pictures) {
+        this.pictures = pictures;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
     }
 
     @Override

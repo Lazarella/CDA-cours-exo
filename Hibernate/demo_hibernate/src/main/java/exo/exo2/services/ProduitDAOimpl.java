@@ -4,9 +4,7 @@ import exo.exo1.model.Produit;
 import exo.exo2.DAO.ProduitDAO;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.boot.MetadataSources;
-import org.hibernate.boot.registry.StandardServiceRegistry;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import java.util.Date;
@@ -14,19 +12,19 @@ import java.util.List;
 
 public class ProduitDAOimpl extends BaseService implements ProduitDAO  {
 
-    public ProduitDAOimpl() {
+    public ProduitDAOimpl(SessionFactory sessionFactory) {
         super();
     }
 
     @Override
     public boolean addProduit(Produit produit) {
-        StandardServiceRegistry registry = new StandardServiceRegistryBuilder().configure().build();
-        SessionFactory sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
         Session session = sessionFactory.openSession();
-        org.hibernate.Transaction transac = null;
+        Transaction transac = null;
 
         try {
+            transac = session.beginTransaction();
             session.save(produit);
+            transac.commit();
         } catch (Exception e) {
             if (transac != null) {
                 transac.rollback();
@@ -37,21 +35,18 @@ public class ProduitDAOimpl extends BaseService implements ProduitDAO  {
 
         } finally {
             session.close();
-            sessionFactory.close();
         }
         return true;
     }
 
     @Override
     public boolean updateProduit(Long produitId, int newStock) {
-        StandardServiceRegistry registry = new StandardServiceRegistryBuilder().configure().build();
-        SessionFactory sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
         Session session = sessionFactory.openSession();
         org.hibernate.Transaction transac = null;
 
         try {
 
-            Produit p = session.load(Produit.class, produitId);
+            Produit p = session.get(Produit.class, produitId);
             p.setStock(newStock);
             session.update(p);
 
@@ -64,8 +59,9 @@ public class ProduitDAOimpl extends BaseService implements ProduitDAO  {
             }
 
         } finally {
+            session.getTransaction().commit();
             session.close();
-            sessionFactory.close();
+
         }
         return true;
     }
@@ -73,8 +69,6 @@ public class ProduitDAOimpl extends BaseService implements ProduitDAO  {
 
     @Override
     public boolean getProduitById(Long produitId) {
-        StandardServiceRegistry registry = new StandardServiceRegistryBuilder().configure().build();
-        SessionFactory sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
         Session session = sessionFactory.openSession();
         org.hibernate.Transaction transac = null;
 
@@ -89,18 +83,17 @@ public class ProduitDAOimpl extends BaseService implements ProduitDAO  {
             }
 
         } finally {
+            session.getTransaction().commit();
             session.close();
-            sessionFactory.close();
         }
         return true;
     }
 
         @Override
         public List<Produit> getAllProduit () {
-            StandardServiceRegistry registry = new StandardServiceRegistryBuilder().configure().build();
-            SessionFactory sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
+
             Session session = sessionFactory.openSession();
-            org.hibernate.Transaction transac = null;
+            Transaction transac = null;
             List<Produit> allProduit = null;
 
             try {
@@ -120,16 +113,15 @@ public class ProduitDAOimpl extends BaseService implements ProduitDAO  {
                 }
 
             } finally {
+                session.getTransaction().commit();
                 session.close();
-                sessionFactory.close();
             }
             return allProduit;
         }
 
         @Override
         public boolean deleteProduit (Long produitId){
-            StandardServiceRegistry registry = new StandardServiceRegistryBuilder().configure().build();
-            SessionFactory sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
+
             Session session = sessionFactory.openSession();
             org.hibernate.Transaction transac = null;
             List<Produit> allProduit = null;
@@ -147,16 +139,15 @@ public class ProduitDAOimpl extends BaseService implements ProduitDAO  {
                 }
 
             } finally {
+                session.getTransaction().commit();
                 session.close();
-                sessionFactory.close();
             }
             return true;
         }
 
         @Override
         public List<Produit> getProduitDateFilter (Date date1, Date date2){
-            StandardServiceRegistry registry = new StandardServiceRegistryBuilder().configure().build();
-            SessionFactory sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
+
             Session session = sessionFactory.openSession();
             org.hibernate.Transaction transac = null;
             List<Produit> rangeProduit = null;
@@ -175,23 +166,23 @@ public class ProduitDAOimpl extends BaseService implements ProduitDAO  {
                 }
 
             } finally {
+                session.getTransaction().commit();
                 session.close();
-                sessionFactory.close();
             }
             return rangeProduit;
         }
 
         @Override
         public List<Produit> getProduitPriceFilter (Double price){
-            StandardServiceRegistry registry = new StandardServiceRegistryBuilder().configure().build();
-            SessionFactory sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
+
             Session session = sessionFactory.openSession();
-            org.hibernate.Transaction transac = null;
+            Transaction transac = null;
             List<Produit> priceProduit = null;
 
             try {
                 Query<Produit> produitQuery = session.createQuery("from Produit where prix > :price");
                 produitQuery.setParameter("price", price);
+                transac.commit();
 
             } catch (Exception e) {
                 if (transac != null) {
@@ -203,7 +194,6 @@ public class ProduitDAOimpl extends BaseService implements ProduitDAO  {
 
             } finally {
                 session.close();
-                sessionFactory.close();
             }
             return priceProduit;
         }
@@ -219,7 +209,7 @@ public class ProduitDAOimpl extends BaseService implements ProduitDAO  {
 
     @Override
     public void valueProduitBrand(String brand) {
-        double valueBrandProduct = (double) session.createQuery("select prix * stock from Produit where :brand").uniqueResult();
+        double valueBrandProduct = (double) session.createQuery("select sum(prix * stock) from Produit where :brand").uniqueResult();
         System.out.println("La valeur actuelle du stock de "+ brand + " est "+ valueBrandProduct + " €");
 
     }
@@ -241,6 +231,7 @@ public class ProduitDAOimpl extends BaseService implements ProduitDAO  {
         session = sessionFactory.openSession();
         session.beginTransaction();
         List<Produit>selectedProduct = getByBrand(brand);
+        //rajouter un for each pour supprimer les éléments un par un
         session.delete(selectedProduct);
         session.getTransaction().commit();
         return true;
