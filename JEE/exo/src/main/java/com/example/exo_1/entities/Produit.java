@@ -8,12 +8,12 @@ import java.util.Date;
 public class Produit {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private String marque;
 
-    private String reference;
+    private String reference_prod;
 
     @Temporal(TemporalType.DATE)
     private Date dateAchat;
@@ -27,14 +27,14 @@ public class Produit {
 
     public Produit(String marque, String reference, Date dateAchat, double prix) {
         this.marque = marque;
-        this.reference = reference;
+        this.reference_prod = reference;
         this.dateAchat = dateAchat;
         this.prix = prix;
     }
 
     public Produit(String marque, String reference, Date dateAchat, double prix, int stock) {
         this.marque = marque;
-        this.reference = reference;
+        this.reference_prod = reference;
         this.dateAchat = dateAchat;
         this.prix = prix;
         this.stock = stock;
@@ -57,11 +57,11 @@ public class Produit {
     }
 
     public String getReference() {
-        return reference;
+        return reference_prod;
     }
 
     public void setReference(String reference) {
-        this.reference = reference;
+        this.reference_prod = reference;
     }
 
     public Date getDateAchat() {
@@ -93,7 +93,7 @@ public class Produit {
         return "Produit{" +
                 "id=" + id +
                 ", marque='" + marque + '\'' +
-                ", reference='" + reference + '\'' +
+                ", reference='" + reference_prod + '\'' +
                 ", dateAchat=" + dateAchat +
                 ", prix=" + prix +
                 ", stock=" + stock +

@@ -6,5 +6,6 @@
 <hibernate-configuration>
     <session-factory>
         <mapping class="com.example.exo_1.entities.Produit" />
+        <mapping class="com.example.exo_1.entities.Utilisateur"/>
     </session-factory>
 </hibernate-configuration>

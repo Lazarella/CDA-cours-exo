@@ -1,12 +1,12 @@
 package com.example.exo_1.services;
 
+import com.example.exo_1.entities.Produit;
 import com.example.exo_1.interfaces.Repository;
 import org.hibernate.query.Query;
-
 import java.util.Date;
 import java.util.List;
 
-public class ProduitService<Produit> extends BaseService implements Repository<Produit> {
+public class ProduitService extends BaseService implements Repository<Produit> {
 
     public ProduitService() {
         super();
@@ -44,11 +44,11 @@ public class ProduitService<Produit> extends BaseService implements Repository<P
 
     @Override
     public Produit findById(int id) {
-//        Produit produit = null;
-//        session = sessionFactory.openSession();
-//        produit = (Produit) session.get(Produit.class, id);
-//        session.close();
-        return null;
+        Produit produit = null;
+        session = sessionFactory.openSession();
+        produit = (Produit) session.get(Produit.class, id);
+        session.close();
+        return produit;
     }
 
     @Override

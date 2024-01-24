@@ -11,5 +11,7 @@
 <a href="hello-servlet">Hello Servlet</a>
 <br>
 <a href="produit_list">Liste de nos super produits!</a>
+<br>
+<a href="upload">Charger une image</a>
 </body>
 </html>
