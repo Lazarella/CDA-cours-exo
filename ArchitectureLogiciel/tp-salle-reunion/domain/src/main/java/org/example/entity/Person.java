@@ -29,7 +29,10 @@ public class Person {
             return this;
         }
 
-        public Builder lastName(String lastName) {
+        public Builder firstName(String firstName) {
+            this.firstName = lastName;
+            return this;
+        }public Builder lastName(String lastName) {
             this.lastName = lastName;
             return this;
         }

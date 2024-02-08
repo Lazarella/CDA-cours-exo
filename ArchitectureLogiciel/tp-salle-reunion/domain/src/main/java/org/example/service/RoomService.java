@@ -37,7 +37,7 @@ if (!isPersonAdmin(person)){
             return null;
         }
 
-        public List<Room> getAll(String search){
+        public List<Room> getAll(){
             return null;
         }
         public boolean isPersonAdmin(Person person){
