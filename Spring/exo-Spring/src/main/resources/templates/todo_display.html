@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste Todos</title>
+</head>
+<body>
+<main>
+  <h1>
+    Listes de vos tâches
+  </h1>
+
+<ul>
+    <li>
+        Nom : <span th:text="${name}"></span>
+        </li>
+    <li>
+        Description : <span th:text="${description}"></span>
+        </li>
+    <li>
+        Fait : <span th:text="${done}"></span>
+    </li>
+</ul>
+</main>
+</body>
+</html>
