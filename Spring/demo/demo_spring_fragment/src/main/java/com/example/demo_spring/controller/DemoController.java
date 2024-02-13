@@ -24,12 +24,13 @@ public class DemoController {
 @GetMapping("/pageb")
     public String pageb(Model model){
 List<Cat> cats = catService.getCats();
-    Cat cat = cats.get(0);
-    Cat cat2 = cats.get(1);
-    Cat cat3 = cats.get(2);
-    model.addAttribute("idCat", cat.getId());
-    model.addAttribute("idCat2", cat2.getId());
-    model.addAttribute("idCat3", cat3.getId());
+//    Cat cat = cats.get(0);
+//    Cat cat2 = cats.get(1);
+//    Cat cat3 = cats.get(2);
+//    model.addAttribute("idCat", cat.getId());
+//    model.addAttribute("idCat2", cat2.getId());
+//    model.addAttribute("idCat3", cat3.getId());
+    model.addAttribute("cats", cats);
         return "PageB";
 }
 

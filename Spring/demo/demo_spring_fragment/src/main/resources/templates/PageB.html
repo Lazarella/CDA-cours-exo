@@ -10,9 +10,11 @@
     <h1>Page B</h1>
     <nav>
         <a th:href="@{/}"> Home Page</a>
-        <a th:href="@{/detail/{id}(id=${idCat})}">Le Chat le plus Swing</a>
-        <a th:href="@{/detail/{id}(id=${idCat2})}">Le Chat le plus Swag</a>
-        <a th:href="@{/detail/{id}(id=${idCat3})}">Le Chat le plus Sérieux</a>
+        <ul>
+        <li th:each="c:${cats}"><a th:href="@{/detail/{id}(id=${c.id})}">Chat disponible</a></li>
+<!--        <a th:href="@{/detail/{id}(id=${idCat2})}">Le Chat le plus Swag</a>-->
+<!--        <a th:href="@{/detail/{id}(id=${idCat3})}">Le Chat le plus Sérieux</a>-->
+        </ul>
     </nav>
 </main>
 </body>
