@@ -53,4 +53,7 @@ public class CatService {
         cats.put(cat.getId(), cat);
     }
 
+    public Cat getCatByName(String str){
+        return cats.values().stream().filter(c -> c.getName().equals(str)).findFirst().orElse(null);
+    }
 }

@@ -5,10 +5,7 @@ import com.example.demo_spring.service.CatService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.UUID;
@@ -47,5 +44,11 @@ List<Cat> cats = catService.getCats();
     System.out.println(cat.getName()+" "+ cat.getBreed());
     catService.addCat(cat);
         return "redirect:/";
+}
+@GetMapping("/look")
+    public String showRabbit(@RequestParam(name= "nameCat", required = false) String name, Model model){
+    Cat cat =    catService.getCatByName(name);
+    model.addAttribute("cat", cat);
+    return "PageC";
 }
 }
