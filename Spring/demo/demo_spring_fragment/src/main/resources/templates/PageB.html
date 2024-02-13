@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page B</title>
+    <span th:replace="~{pagea :: bootstrapImport}"></span>
+</head>
+<body>
+<main>
+    <h1>Page B</h1>
+    <nav>
+        <a th:href="@{/}"> Home Page</a>
+        <a th:href="@{/detail/{id}(id=${idCat})}">Le Chat le plus Swing</a>
+        <a th:href="@{/detail/{id}(id=${idCat2})}">Le Chat le plus Swag</a>
+        <a th:href="@{/detail/{id}(id=${idCat3})}">Le Chat le plus Sérieux</a>
+    </nav>
+</main>
+</body>
+</html>

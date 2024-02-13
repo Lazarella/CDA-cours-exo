@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail Chat</title>
+    <span th:replace="~{pagea :: bootstrapImport}"></span>
+</head>
+<body>
+<main>
+    <h2>Détail de mon chat</h2>
+    <p>
+        Nom : <span th:text="${mycat.name}"></span>
+        Race : <span th:text="${mycat.breed}"></span>
+
+        <a th:href="@{/pageb}">
+                Retour au Menu
+        </a>
+    </p>
+</main>
+</body>
+</html>
