@@ -10,12 +10,16 @@
     <h2>Détail de mon chat</h2>
     <p>
         Nom : <span th:text="${mycat.name}"></span>
+        </p>
+    <p>
         Race : <span th:text="${mycat.breed}"></span>
-
+    </p>
+    <nav>
         <a th:href="@{/pageb}">
                 Retour au Menu
         </a>
-    </p>
+    </nav>
+
 </main>
 </body>
 </html>

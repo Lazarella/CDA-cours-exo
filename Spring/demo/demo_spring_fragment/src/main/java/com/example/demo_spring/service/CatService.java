@@ -42,4 +42,15 @@ public class CatService {
         // return cats.get(id);  C'est plus simple ^^'
     }
 
+    public void addCat(Cat cat){
+        Cat cat1 = Cat.builder()
+                .id(UUID.randomUUID())
+                .name(cat.getName())
+                .breed(cat.getBreed())
+                .build();
+        cat.setId(UUID.randomUUID());
+
+        cats.put(cat.getId(), cat);
+    }
+
 }

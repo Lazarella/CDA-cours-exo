@@ -7,14 +7,14 @@
 </head>
 <body>
 <main>
-    <h1>Page B</h1>
+    <h1>Nos chats</h1>
     <nav>
         <a th:href="@{/}"> Home Page</a>
-        <ul>
-        <li th:each="c:${cats}"><a th:href="@{/detail/{id}(id=${c.id})}">Chat disponible</a></li>
-<!--        <a th:href="@{/detail/{id}(id=${idCat2})}">Le Chat le plus Swag</a>-->
-<!--        <a th:href="@{/detail/{id}(id=${idCat3})}">Le Chat le plus Sérieux</a>-->
+        <div class="container">
+        <ul class="list-group list-group-flush">
+        <li th:each="c:${cats}" class="list-group-item"><a th:href="@{/detail/{id}(id=${c.id})}"><span th:text="${c.name}"></span></a></li>
         </ul>
+        </div>
     </nav>
 </main>
 </body>

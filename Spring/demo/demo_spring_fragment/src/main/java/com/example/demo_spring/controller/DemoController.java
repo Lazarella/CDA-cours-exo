@@ -6,7 +6,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 import java.util.UUID;
@@ -24,12 +26,6 @@ public class DemoController {
 @GetMapping("/pageb")
     public String pageb(Model model){
 List<Cat> cats = catService.getCats();
-//    Cat cat = cats.get(0);
-//    Cat cat2 = cats.get(1);
-//    Cat cat3 = cats.get(2);
-//    model.addAttribute("idCat", cat.getId());
-//    model.addAttribute("idCat2", cat2.getId());
-//    model.addAttribute("idCat3", cat3.getId());
     model.addAttribute("cats", cats);
         return "PageB";
 }
@@ -41,5 +37,15 @@ List<Cat> cats = catService.getCats();
 
         return "PageC";
     }
-
+@GetMapping("/add")
+    public String addCat(Model model){
+        model.addAttribute("cat", new Cat());
+        return "form/form";
+}
+@PostMapping("/add")
+    public String submitCat(@ModelAttribute("cat")Cat cat){
+    System.out.println(cat.getName()+" "+ cat.getBreed());
+    catService.addCat(cat);
+        return "redirect:/";
+}
 }
