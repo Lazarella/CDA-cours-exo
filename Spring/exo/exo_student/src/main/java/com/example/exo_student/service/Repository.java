@@ -6,10 +6,12 @@ import java.util.List;
 import java.util.UUID;
 
 public interface Repository <T>{
-    void createStudent(T t);
+    Student createStudent(T t);
     Student getStudentGetById(UUID id);
+    void deleteStudent(UUID id);
+    Student updateStudent(T t);
 
-    Student getStudentByLastName(String str);
+    List<Student> getStudentByLastName(String str);
     List<Student> getAllStudent();
 
 

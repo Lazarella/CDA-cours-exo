@@ -7,6 +7,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import java.util.stream.Collectors;
+
 @Service
 public class StudentServiceImpl implements Repository <Student> {
 
@@ -51,9 +53,10 @@ public class StudentServiceImpl implements Repository <Student> {
 
 
     @Override
-    public void createStudent(Student student) {
+    public Student createStudent(Student student) {
+        student.setId(UUID.randomUUID());
        students.put(student.getId(), student);
-
+        return student;
     }
 
     @Override
@@ -62,8 +65,18 @@ public class StudentServiceImpl implements Repository <Student> {
     }
 
     @Override
-    public Student getStudentByLastName(String str) {
-        return students.values().stream().filter(s -> s.getLastName().equals(str)).findFirst().orElse(null);
+    public void deleteStudent(UUID id) {
+        students.remove(getStudentGetById(id));
+    }
+
+    @Override
+    public Student updateStudent(Student student) {
+        return null;
+    }
+
+    @Override
+    public List<Student> getStudentByLastName(String str) {
+        return students.values().stream().filter(s -> s.getLastName().equals(str)).collect(Collectors.toList());
     }
 
     @Override

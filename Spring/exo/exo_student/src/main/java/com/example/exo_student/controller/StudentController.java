@@ -46,9 +46,9 @@ public String showAllStudents(Model model){
         return "studentadmin/detail";
     }
     @GetMapping("/detail")
-    public String searchByLastName( Model model, String str){
-        Student myStudent = repository.getStudentByLastName(str);
-        model.addAttribute("myStudent", myStudent);
+    public String searchByLastName(@RequestParam String str, Model model) {
+        List<Student> students = repository.getStudentByLastName(str);
+        model.addAttribute("students", students);
         return "studentadmin/detail";
     }
 }

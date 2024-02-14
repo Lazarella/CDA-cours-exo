@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Detail student</title>
     <span th:replace="~{home :: bootstrapImports}"></span>
-</head>
 </head>
 <body>
 <header>
@@ -13,13 +12,24 @@
     </h1>
 </header>
 <main>
-    <div th:unless="myStudent.id == null">
+    <div th:unless="myStudent.id == null" class="container">
     <h2>
         <span th:text="${myStudent.firstName}"></span>
         <span th:text="${myStudent.lastName}"></span>
     </h2>
     <p> Matricule : <span th:text="${myStudent.id}"></span></p>
     <p> Email : <span th:text="${myStudent.mail}"></span></p>
+    </div>
+    <div class="container">
+        <form method="get" th:action="/form">
+        <button type="button" class="btn btn-success" >Modifier</button>
+        </form>
+        <form method="get" th:action="/add">
+        <button type="button" class="btn btn-danger">Supprimer</button>
+        </form>
+        <div class="alert alert-warning" role="alert">
+            This is a warning alert—check it out!
+        </div>
     </div>
 </main>
 </body>

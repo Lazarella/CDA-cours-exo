@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Liste des étudiants</title>
+    <span th:replace="~{home :: bootstrapImports}"></span>
 </head>
 <body>
 <header>
     <h1>Liste des étudiant.e.s</h1>
-    <span th:replace="~{home :: bootstrapImports}"></span>
 </header>
+<main class="container">
 <table class="table">
     <thead>
     <tr>
@@ -25,5 +26,6 @@
     </tr>
     </tbody>
 </table>
+</main>
 </body>
 </html>
