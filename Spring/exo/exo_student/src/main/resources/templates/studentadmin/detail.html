@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <span th:replace="~{home :: bootstrapImports}"></span>
+</head>
+</head>
+<body>
+<header>
+    <h1>
+        Détail de l'étudiant.e
+    </h1>
+</header>
+<main>
+    <div th:unless="myStudent.id == null">
+    <h2>
+        <span th:text="${myStudent.firstName}"></span>
+        <span th:text="${myStudent.lastName}"></span>
+    </h2>
+    <p> Matricule : <span th:text="${myStudent.id}"></span></p>
+    <p> Email : <span th:text="${myStudent.mail}"></span></p>
+    </div>
+</main>
+</body>
+</html>

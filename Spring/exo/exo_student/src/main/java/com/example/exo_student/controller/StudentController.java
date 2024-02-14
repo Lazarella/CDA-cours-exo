@@ -5,9 +5,10 @@ import com.example.exo_student.service.Repository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.UUID;
 
 @Controller
 @RequiredArgsConstructor
@@ -24,19 +25,30 @@ public class StudentController {
     @GetMapping("/add")
     public String addStudent(Model model){
         model.addAttribute("student", new Student());
-        return "studentAdministrator/form";
+        return "studentadmin/form";
     }
 @PostMapping("/add")
     public String submitStudent(@ModelAttribute("student") Student student){
-
+    repository.createStudent(student);
         return "redirect:/list";
 }
 @GetMapping("/list")
-public String showAllStudents(){
-    return "studentAdministrator/list";
+public String showAllStudents(Model model){
+    List<Student> students = repository.getAllStudent();
+    model.addAttribute("students", students);
+    return  "studentadmin/list";
+    }
+
+    @GetMapping("/detail/{studentId}")
+    public String studentDetail(@PathVariable("studentId")UUID id, Model model){
+        Student myStudent = repository.getStudentGetById(id);
+        model.addAttribute("myStudent", myStudent);
+        return "studentadmin/detail";
     }
     @GetMapping("/detail")
-    public String showStudentsDetail(){
-        return "studentAdministrator/detail";
+    public String searchByLastName( Model model, String str){
+        Student myStudent = repository.getStudentByLastName(str);
+        model.addAttribute("myStudent", myStudent);
+        return "studentadmin/detail";
     }
 }
