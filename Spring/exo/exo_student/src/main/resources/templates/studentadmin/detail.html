@@ -12,23 +12,19 @@
     </h1>
 </header>
 <main>
-    <div th:unless="myStudent.id == null" class="container">
-    <h2>
+    <div th:unless="myStudent.id == null" class="container d-flex flex-column p-1">
+    <h2 class="display-2">
         <span th:text="${myStudent.firstName}"></span>
         <span th:text="${myStudent.lastName}"></span>
     </h2>
     <p> Matricule : <span th:text="${myStudent.id}"></span></p>
     <p> Email : <span th:text="${myStudent.mail}"></span></p>
     </div>
-    <div class="container">
-        <form method="get" th:action="/form">
-        <button type="button" class="btn btn-success" >Modifier</button>
+    <div class="container d-flex justify-content-around m-1">
+        <a th:href="@{/add/{id}(id=${myStudent.id})}" class="btn btn-success">Modifier</a>
+        <form id="deleteForm" method="post" th:action="@{/api/v1/academy/delete/{id}(id=${myStudent.id})}" >
+            <button type="button" class="btn btn-danger" th:onclick="@{/list}">Supprimer</button>
         </form>
-        <form method="get" th:action="/add">
-        <button type="button" class="btn btn-danger">Supprimer</button>
-        </form>
-        <div class="alert alert-warning" role="alert">
-            This is a warning alert—check it out!
         </div>
     </div>
 </main>
