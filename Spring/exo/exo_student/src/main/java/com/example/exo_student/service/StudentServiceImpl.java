@@ -66,7 +66,7 @@ public class StudentServiceImpl implements Repository <Student> {
 
     @Override
     public void deleteStudent(UUID id) {
-        students.remove(getStudentGetById(id));
+        students.remove(getStudentGetById(id)); // faire un stream pour utiliser remove if
     }
 
     @Override

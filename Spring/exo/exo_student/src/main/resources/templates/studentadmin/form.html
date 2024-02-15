@@ -6,6 +6,9 @@
     <span th:replace="~{home :: bootstrapImports}"></span>
 </head>
 <body>
+<header>
+    <span th:replace="~{home :: navbar}"></span>
+</header>
 <main>
     <div>
         <form th:action="@{/list}" th:object="${student}" method="post">
