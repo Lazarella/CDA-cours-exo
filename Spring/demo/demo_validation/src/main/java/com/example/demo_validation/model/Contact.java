@@ -1,5 +1,6 @@
 package com.example.demo_validation.model;
 
+import com.example.demo_validation.validation.MyValid;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,6 +17,7 @@ public class Contact {
 
     @NotNull
     @NotBlank
+    @MyValid(value="ta", message="On avait dit Tata!!!")
     private String lastName;
 
     @Min(3)

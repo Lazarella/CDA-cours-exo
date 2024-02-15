@@ -40,6 +40,7 @@ public class StudentRestController {
 
             return new ResponseEntity<>(errors.toString(), HttpStatus.BAD_REQUEST);
         }
+        studentService.createStudent(student);
         return new ResponseEntity<>("Student created", HttpStatus.BAD_REQUEST);
     }
 
@@ -48,9 +49,21 @@ public class StudentRestController {
         studentService.deleteStudent(id);
     }
 
+//    @PutMapping("/student/{id}") // http://localhost:8081/api/v1/academy/student/x
+//    public Student updateStudent(@PathVariable Long id,@RequestBody Student updateStudent){
+//        return studentService.updateStudent(id,updateStudent);
+//    }
+
     @PutMapping("/student/{id}") // http://localhost:8081/api/v1/academy/student/x
-    public Student updateStudent(@PathVariable Long id,@RequestBody Student updateStudent){
-        return studentService.updateStudent(id,updateStudent);
+    public ResponseEntity<String> updateStudent(@PathVariable Long id,@Valid @RequestBody Student updateStudent, BindingResult bindingResult){
+        if(bindingResult.hasErrors()){
+            StringBuilder errors = new StringBuilder();
+            bindingResult.getAllErrors().forEach(objectError -> errors.append(objectError.toString()+", "));
+
+            return new ResponseEntity<>(errors.toString(), HttpStatus.BAD_REQUEST);
+        }
+        studentService.updateStudent(id,updateStudent);
+        return new ResponseEntity("Etudiant.e mis à jour", HttpStatus.ACCEPTED);
     }
 
 

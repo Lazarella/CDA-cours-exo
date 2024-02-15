@@ -15,7 +15,6 @@ import org.springframework.beans.factory.annotation.Value;
 @Builder
 public class Student {
 
-
     private Long id;
 
     @NotNull
