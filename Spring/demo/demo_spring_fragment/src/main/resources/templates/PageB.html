@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page B</title>
+    <span th:replace="~{pagea :: bootstrapImport}"></span>
+</head>
+<body>
+<main>
+    <h1>Nos chats</h1>
+    <nav>
+        <a th:href="@{/}"> Home Page</a>
+        <div class="container">
+        <ul class="list-group list-group-flush">
+        <li th:each="c:${cats}" class="list-group-item"><a th:href="@{/detail/{id}(id=${c.id})}"><span th:text="${c.name}"></span></a></li>
+        </ul>
+        </div>
+    </nav>
+</main>
+</body>
+</html>

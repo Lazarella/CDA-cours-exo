@@ -1,0 +1,119 @@
+Sub Create_Tables()
+
+DoCmd.RunSQL "CREATE TABLE fournisseur(" & _
+   "id_fournisseur_ INT," & _
+   "nom_fournisseur VARCHAR(50)," & _
+   "adresse_fournisseur VARCHAR(50)," & _
+   "ville_fournisseur VARCHAR(50)," & _
+   "cp_fournisseur INT," & _
+   "PRIMARY KEY(id_fournisseur_)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE produit_(" & _
+   "id_produit INT," & _
+   "nom_produit VARCHAR(50)," & _
+   "description_produit VARCHAR(50)," & _
+   "PRIMARY KEY(id_produit)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE service_achat(" & _
+   "id_service INT," & _
+   "nom_service VARCHAR(50)," & _
+   "PRIMARY KEY(id_service)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE directeur(" & _
+   "id_employee INT," & _
+   "prenom_employee VARCHAR(50)," & _
+   "nom_employee VARCHAR(50)," & _
+   "service VARCHAR(50)," & _
+   "PRIMARY KEY(id_employee)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE Contrat(" & _
+   "id_contrat INT," & _
+   "termes TEXT," & _
+   "signature_date DATE," & _
+   "quantite INT," & _
+   "is_signed LOGICAL," & _
+   "id_fournisseur_ INT NOT NULL," & _
+   "PRIMARY KEY(id_contrat)," & _
+   "FOREIGN KEY(id_fournisseur_) REFERENCES fournisseur(id_fournisseur_)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE produit_prod(" & _
+   "id_produit INT," & _
+   "prix_produit DECIMAL(15,2)," & _
+   "PRIMARY KEY(id_produit)," & _
+   "FOREIGN KEY(id_produit) REFERENCES produit_(id_produit)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE appel_offre(" & _
+   "id_appel_offre INT," & _
+   "date_offre DATE," & _
+   "quantite_produit INT," & _
+   "id_service INT NOT NULL," & _
+   "id_produit INT NOT NULL," & _
+   "PRIMARY KEY(id_appel_offre)," & _
+   "FOREIGN KEY(id_service) REFERENCES service_achat(id_service)," & _
+   "FOREIGN KEY(id_produit) REFERENCES produit_(id_produit)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE offre_ferme(" & _
+   "id_offre_ferme INT," & _
+   "Prix_Produit DECIMAL(15,2)," & _
+   "date_livraison DATE," & _
+   "devis_final DECIMAL(15,2)," & _
+   "id_fournisseur_ INT NOT NULL," & _
+   "id_service INT NOT NULL," & _
+   "PRIMARY KEY(id_offre_ferme)," & _
+   "FOREIGN KEY(id_fournisseur_) REFERENCES fournisseur(id_fournisseur_)," & _
+   "FOREIGN KEY(id_service) REFERENCES service_achat(id_service)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE proposer(" & _
+   "id_fournisseur_ INT," & _
+   "id_appel_offre INT," & _
+   "PRIMARY KEY(id_fournisseur_, id_appel_offre)," & _
+   "FOREIGN KEY(id_fournisseur_) REFERENCES fournisseur(id_fournisseur_)," & _
+   "FOREIGN KEY(id_appel_offre) REFERENCES appel_offre(id_appel_offre)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE valider(" & _
+   "id_employee INT," & _
+   "is_approuved LOGICAL," & _
+   "id_offre_ferme INT NOT NULL," & _
+   "PRIMARY KEY(id_employee)," & _
+   "UNIQUE(id_offre_ferme)," & _
+   "FOREIGN KEY(id_employee) REFERENCES directeur(id_employee)," & _
+   "FOREIGN KEY(id_offre_ferme) REFERENCES offre_ferme(id_offre_ferme)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE refuser(" & _
+   "id_service INT," & _
+   "is_validated LOGICAL," & _
+   "lettre_refus VARCHAR(109)," & _
+   "id_fournisseur_ INT NOT NULL," & _
+   "PRIMARY KEY(id_service)," & _
+   "FOREIGN KEY(id_service) REFERENCES service_achat(id_service)," & _
+   "FOREIGN KEY(id_fournisseur_) REFERENCES fournisseur(id_fournisseur_)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE emettre(" & _
+   "id_contrat INT," & _
+   "is_validated LOGICAL," & _
+   "id_service INT NOT NULL," & _
+   "PRIMARY KEY(id_contrat)," & _
+   "FOREIGN KEY(id_contrat) REFERENCES Contrat(id_contrat)," & _
+   "FOREIGN KEY(id_service) REFERENCES service_achat(id_service)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE Produire(" & _
+   "id_contrat INT," & _
+   "id_produit INT NOT NULL," & _
+   "PRIMARY KEY(id_contrat)," & _
+   "FOREIGN KEY(id_contrat) REFERENCES Contrat(id_contrat)," & _
+   "FOREIGN KEY(id_produit) REFERENCES produit_prod(id_produit)" & _
+");"   
+
+End Sub

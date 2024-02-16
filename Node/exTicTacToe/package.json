@@ -1,0 +1,19 @@
+{
+  "name": "extictactoe",
+  "version": "1.0.0",
+  "description": "making a tic tact toe using a ihm ",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "tictactoetest"
+  },
+  "keywords": [
+    "tictactoe",
+    "ex",
+    "exercice",
+    "practice",
+    "node"
+  ],
+  "author": "Lazare",
+  "license": "MIT"
+}

@@ -1,0 +1,96 @@
+{
+    "items": [
+      {
+        "id": 1,
+        "title": "Handcrafted Leather Wallet",
+        "price": 49.99,
+        "description": "Genuine leather wallet with multiple card slots and a stylish design.",
+        "img": "https://example.com/wallet.jpg"
+      },
+      {
+        "id": 2,
+        "title": "Vintage Analog Watch",
+        "price": 79.99,
+        "description": "Elegant and classic wristwatch with a leather strap and precision movement.",
+        "img": "https://example.com/watch.jpg"
+      },
+      {
+        "id": 3,
+        "title": "Aromatherapy Diffuser",
+        "price": 34.99,
+        "description": "Ultrasonic diffuser with LED lights for creating a soothing atmosphere.",
+        "img": "https://example.com/diffuser.jpg"
+      },
+      {
+        "id": 4,
+        "title": "Cozy Knit Sweater",
+        "price": 59.99,
+        "description": "Warm and comfortable sweater, perfect for the winter season.",
+        "img": "https://example.com/sweater.jpg"
+      },
+      {
+        "id": 5,
+        "title": "Wireless Bluetooth Earbuds",
+        "price": 69.99,
+        "description": "High-quality wireless earbuds with noise-cancelling technology.",
+        "img": "https://example.com/earbuds.jpg"
+      },
+      {
+        "id": 6,
+        "title": "Wooden Desk Organizer",
+        "price": 19.99,
+        "description": "Handcrafted wooden organizer for keeping your desk clutter-free.",
+        "img": "https://example.com/organizer.jpg"
+      },
+      {
+        "id": 7,
+        "title": "Scented Soy Candles Set",
+        "price": 24.99,
+        "description": "Set of scented soy candles in various relaxing fragrances.",
+        "img": "https://example.com/candles.jpg"
+      },
+      {
+        "id": 8,
+        "title": "Canvas Backpack",
+        "price": 39.99,
+        "description": "Stylish canvas backpack with multiple compartments for storage.",
+        "img": "https://example.com/backpack.jpg"
+      },
+      {
+        "id": 9,
+        "title": "Artisan Ceramic Coffee Mug",
+        "price": 14.99,
+        "description": "Hand-painted ceramic mug for enjoying your morning coffee.",
+        "img": "https://example.com/mug.jpg"
+    },
+    {
+        "id": 10,
+        "title": "Stainless Steel Water Bottle",
+        "price": 19.99,
+        "description": "Durable stainless steel water bottle with a leak-proof design.",
+        "img": "https://example.com/water-bottle.jpg"
+    },
+    {
+        "id": 11,
+        "title": "Cozy Fleece Blanket",
+        "price": 29.99,
+        "description": "Soft and warm fleece blanket for snuggling up on the couch.",
+        "img": "https://example.com/blanket.jpg"
+    },
+    {
+        "id": 12,
+        "title": "Gourmet Chocolate Assortment",
+        "price": 29.99,
+        "description": "Delicious assortment of gourmet chocolates in a decorative box.",
+        "img": "https://example.com/chocolates.jpg"
+    },
+    {
+        "id": 13,
+        "title": "Bamboo Cutting Board Set",
+        "price": 27.99,
+        "description": "Set of bamboo cutting boards in different sizes for versatile use.",
+        "img": "https://example.com/cutting-boards.jpg"
+    }
+    ]
+  }
+  

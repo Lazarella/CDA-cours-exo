@@ -1,0 +1,21 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "First attempt to express",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "todotest"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "todo"
+  ],
+  "author": "Lazare",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
+  }
+}

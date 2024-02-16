@@ -1,0 +1,82 @@
+{
+    "todos": [
+    {
+        "id": 1,
+        "title": "Gather herbs for a protection sachet",
+        "description": "Harvest herbs like sage and rosemary for a protective charm.",
+        "status": "pending"
+    },
+    {
+        "id": 2,
+        "title": "Create a hate spell candle",
+        "description": "Craft a red candle with oils and herbs for hate and disgust.",
+        "status": "pending"
+    },
+    {
+        "id": 3,
+        "title": "Cast a circle and invoke the elements",
+        "description": "Connect with earth, air, fire, and water for a sacred ritual.",
+        "status": "pending"
+    },
+    {
+        "id": 4,
+        "title": "Divination with tarot cards",
+        "description": "Seek insight and guidance through a tarot card reading.",
+        "status": "pending"
+    },
+    {
+        "id": 5,
+        "title": "Craft a protection amulet",
+        "description": "Make a protective talisman using crystals and symbols.",
+        "status": "pending"
+    },
+    {
+        "id": 6,
+        "title": "Meditate with a black obsidian mirror",
+        "description": "Scry and gain spiritual insights with a scrying mirror.",
+        "status": "pending"
+    },
+    {
+        "id": 7,
+        "title": "Herbal tea for psychic awareness",
+        "description": "Blend herbs like mugwort and lavender to enhance psychic abilities.",
+        "status": "pending"
+    },
+    {
+        "id": 8,
+        "title": "Write a spell for manifestation",
+        "description": "Craft a personal spell to manifest your desires.",
+        "status": "pending"
+    },
+    {
+        "id": 9,
+        "title": "Anointing with magical oils",
+        "description": "Use enchanted oils to empower candles, tools, and yourself.",
+        "status": "pending"
+    },
+    {
+        "id": 10,
+        "title": "Create a dream sachet",
+        "description": "Fill a sachet with herbs to enhance dream recall and lucid dreaming.",
+        "status": "pending"
+    },
+    {
+        "id": 11,
+        "title": "Moon phase ritual",
+        "description": "Align your magic with the moon's energy in a ritual.",
+        "status": "pending"
+    },
+    {
+        "id": 12,
+        "title": "Conduct a kitchen witchery potion",
+        "description": "Brew a magical potion with herbs and spices for your intent.",
+        "status": "pending"
+    },
+    {
+        "id": 13,
+        "title": "Crystal grid for abundance",
+        "description": "Arrange crystals to attract prosperity and wealth into your life.",
+        "status": "pending"
+    }
+    ]
+}

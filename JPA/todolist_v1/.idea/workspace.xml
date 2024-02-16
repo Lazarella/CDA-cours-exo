@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1cb205f1-2d92-4ae2-b835-5225e248f1a0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../JDBC/src/main/java/org/example/exo_banque/Bank.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../JDBC/src/main/java/org/example/exo_banque/Bank.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa_demo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa_demo/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa_demo/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa_demo/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa_demo/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa_demo/bdd-jpa-demo.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa_demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa_demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa_demo/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa_demo/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa_demo/src/main/java/demo/Demo3.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa_demo/src/main/java/demo/Demo3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa_demo/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa_demo/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa_exo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa_exo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/ToDoListAppConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/ToDoListAppConsole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/impl/TaskDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/impl/TaskDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../todolist_v2/src/main/java/org/example/controller/ToDoListAppConsoleV3.java" beforeDir="false" afterPath="$PROJECT_DIR$/../todolist_v2/src/main/java/org/example/controller/ToDoListAppConsoleV3.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2aRv1TL2YM37gkjK6jDiBI72rp9" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "School",
+    "last_opened_file_path": "C:/MonRepo/CDA-cours-exo/JPA/todolist_v1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\MonRepo\CDA-cours-exo\JPA\todolist_v1\target" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\MonRepo\CDA-cours-exo\JPA\todolist_v1" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1cb205f1-2d92-4ae2-b835-5225e248f1a0" name="Changes" comment="" />
+      <created>1704293991198</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1704293991198</updated>
+      <workItem from="1704293992219" duration="5247000" />
+      <workItem from="1704353925416" duration="7815000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

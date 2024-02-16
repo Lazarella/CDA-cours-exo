@@ -1,0 +1,115 @@
+CREATE TABLE fournisseur(
+   id_fournisseur_ INT,
+   nom_fournisseur VARCHAR(50) ,
+   adresse_fournisseur VARCHAR(50) ,
+   ville_fournisseur VARCHAR(50) ,
+   cp_fournisseur INT,
+   PRIMARY KEY(id_fournisseur_)
+);
+
+CREATE TABLE produit_(
+   id_produit INT,
+   nom_produit VARCHAR(50) ,
+   description_produit VARCHAR(50) ,
+   PRIMARY KEY(id_produit)
+);
+
+CREATE TABLE service_achat(
+   id_service INT,
+   nom_service VARCHAR(50) ,
+   PRIMARY KEY(id_service)
+);
+
+CREATE TABLE directeur(
+   id_employee INT,
+   prenom_employee VARCHAR(50) ,
+   nom_employee VARCHAR(50) ,
+   service VARCHAR(50) ,
+   PRIMARY KEY(id_employee)
+);
+
+CREATE TABLE Contrat(
+   id_contrat INT,
+   termes TEXT,
+   signature_date DATE,
+   quantite INT,
+   is_signed BOOLEAN,
+   id_fournisseur_ INT NOT NULL,
+   PRIMARY KEY(id_contrat),
+   FOREIGN KEY(id_fournisseur_) REFERENCES fournisseur(id_fournisseur_)
+);
+
+CREATE TABLE produit_prod(
+   id_produit INT,
+   prix_produit DECIMAL(15,2)  ,
+   PRIMARY KEY(id_produit),
+   FOREIGN KEY(id_produit) REFERENCES produit_(id_produit)
+);
+
+CREATE TABLE appel_offre(
+   id_appel_offre INT,
+   date_offre DATE,
+   quantite_produit INT,
+   id_service INT NOT NULL,
+   id_produit INT NOT NULL,
+   PRIMARY KEY(id_appel_offre),
+   FOREIGN KEY(id_service) REFERENCES service_achat(id_service),
+   FOREIGN KEY(id_produit) REFERENCES produit_(id_produit)
+);
+
+CREATE TABLE offre_ferme(
+   id_offre_ferme INT,
+   Prix_Produit DECIMAL(15,2)  ,
+   date_livraison DATE,
+   devis_final DECIMAL(15,2)  ,
+   id_fournisseur_ INT NOT NULL,
+   id_service INT NOT NULL,
+   PRIMARY KEY(id_offre_ferme),
+   FOREIGN KEY(id_fournisseur_) REFERENCES fournisseur(id_fournisseur_),
+   FOREIGN KEY(id_service) REFERENCES service_achat(id_service)
+);
+
+CREATE TABLE proposer(
+   id_fournisseur_ INT,
+   id_appel_offre INT,
+   PRIMARY KEY(id_fournisseur_, id_appel_offre),
+   FOREIGN KEY(id_fournisseur_) REFERENCES fournisseur(id_fournisseur_),
+   FOREIGN KEY(id_appel_offre) REFERENCES appel_offre(id_appel_offre)
+);
+
+CREATE TABLE valider(
+   id_employee INT,
+   is_approuved BOOLEAN,
+   id_offre_ferme INT NOT NULL,
+   PRIMARY KEY(id_employee),
+   UNIQUE(id_offre_ferme),
+   FOREIGN KEY(id_employee) REFERENCES directeur(id_employee),
+   FOREIGN KEY(id_offre_ferme) REFERENCES offre_ferme(id_offre_ferme)
+);
+
+CREATE TABLE refuser(
+   id_service INT,
+   is_validated BOOLEAN,
+   lettre_refus VARCHAR(109) ,
+   id_fournisseur_ INT NOT NULL,
+   PRIMARY KEY(id_service),
+   FOREIGN KEY(id_service) REFERENCES service_achat(id_service),
+   FOREIGN KEY(id_fournisseur_) REFERENCES fournisseur(id_fournisseur_)
+);
+
+CREATE TABLE emettre(
+   id_contrat INT,
+   is_validated BOOLEAN,
+   id_service INT NOT NULL,
+   PRIMARY KEY(id_contrat),
+   FOREIGN KEY(id_contrat) REFERENCES Contrat(id_contrat),
+   FOREIGN KEY(id_service) REFERENCES service_achat(id_service)
+);
+
+CREATE TABLE Produire(
+   id_contrat INT,
+   id_produit INT NOT NULL,
+   PRIMARY KEY(id_contrat),
+   FOREIGN KEY(id_contrat) REFERENCES Contrat(id_contrat),
+   FOREIGN KEY(id_produit) REFERENCES produit_prod(id_produit)
+);

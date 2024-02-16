@@ -1,0 +1,19 @@
+{
+  "name": "exarborescence",
+  "version": "1.0.0",
+  "description": "create a simple arborescence",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "arbotest"
+  },
+  "keywords": [
+    "arborescence",
+    "exo"
+  ],
+  "author": "Lazare",
+  "license": "MIT",
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  }
+}

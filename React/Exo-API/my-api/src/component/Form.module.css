@@ -1,0 +1,8 @@
+.form{
+    border: solid aliceblue 1px; 
+    border-radius : 5px; 
+    background: aliceblue; 
+    color: rgb(82, 82, 82);
+    display: flex;
+    flex-wrap: wrap;
+}

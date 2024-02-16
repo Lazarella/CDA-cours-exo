@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <span th:replace="~{pagea :: bootstrapImport}"></span>
+</head>
+<body>
+
+<header>
+    <h1>Mon formulaire</h1>
+    <a th:href="@{/}">Home</a>
+</header>
+<main>
+    <form th:action="@{/add}" th:object="${cat}" method="post">
+        <div>
+            <label for="name">Nom du chat: </label>
+            <input type="text" id="name" th:field="*{name}">
+        </div>
+        <div>
+            <label for="breed">Race du chat: </label>
+            <input type="text" id="breed" th:field="*{breed}">
+        </div>
+        <div>
+            <button >Valider</button>
+            </div>
+
+    </form>
+</main>
+</body>
+</html>
