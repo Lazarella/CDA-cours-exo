@@ -1,0 +1,62 @@
+body{
+    box-sizing: border-box;
+}
+@keyframes ueMove {
+    0%{
+        font-size: 5rem;
+    }
+    50%{
+        font-size:10rem;
+    }
+    100%{
+        font-size: 5rem;;
+    }
+    
+}
+
+main{
+   
+    width: 40rem;
+    height: 20rem;
+    background: linear-gradient(45deg, blue, black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    
+}
+H1{
+    font-size: 10rem;
+    font-family: sans-serif;
+    font-weight: 300;
+    color:yellow;
+    animation: ueMove 3s infinite ;
+    position:absolute;
+    
+}
+.star-circle{
+    width:17rem;
+    height:17rem;
+    border-radius: 50%; 
+    position: relative;
+}
+.star{
+    grid-area: layer;
+    color:yellow;
+    transform-origin: 0% 0%;
+    position: absolute;
+    height:1rem;
+    display: block;
+  
+   
+}
+/* .star-circle div:first-child{
+    transform:translate(9rem);
+}
+.star-circle div:nth-child(2){
+    transform:translate(12rem);
+}
+.star-circle div:nth-child(3){
+    transform:translate(15rem);
+} */
+
