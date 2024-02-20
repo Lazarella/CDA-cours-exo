@@ -3,8 +3,7 @@ package com.example.demospringdata.controller;
 import com.example.demospringdata.entity.Person;
 import com.example.demospringdata.service.PersonService;
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -28,8 +27,21 @@ public class PersonRestController {
                     .build()
             );
        }
-       @GetMapping("/delete")
-    public void deletePerson(){
-       }
 
+       @GetMapping("/{id}")
+       public Person getPersonById(@PathVariable Long id){
+        return personService.findById(id);
+       }
+       @DeleteMapping("/delete/'id}")
+    public void deletePerson(@PathVariable Long id){
+        personService.delete(id);
+       }
+       @PostMapping("/submitperson")
+    public void submitPerson(@RequestBody Person person) {
+           personService.save(person);
+       }
+       @PutMapping("/update/{id}")
+    public void updatePerson(@PathVariable Long id){
+
+       }
 }

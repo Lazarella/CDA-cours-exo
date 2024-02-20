@@ -1,4 +1,4 @@
-package com.example.tpblog.model;
+package com.example.tpblog.entity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

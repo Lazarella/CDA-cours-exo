@@ -33,8 +33,7 @@ personRepository.save(person);
 
     @Override
     public void delete(Long id) {
-       Person person = findById(id);
-        personRepository.delete(person);
+        personRepository.deleteById(id);
     }
 
     @Override

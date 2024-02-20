@@ -1,5 +1,7 @@
-package com.example.tpblog.model;
+package com.example.tpblog.entity;
 
+import com.example.tpblog.entity.Comment;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -12,12 +14,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+@Entity
+@Table(name="post")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 public class Post {
-    private UUID id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
+    private Long id;
 
     @NotBlank
     @Size(min=3,max=50)
@@ -30,13 +37,16 @@ public class Post {
     private String content;
     private LocalDateTime dateTime = LocalDateTime.now();
 
-    private List<LocalDateTime> updateDatelist = new ArrayList<>();
+    @ElementCollection
+    private List<LocalDateTime> updateDatelist ;
 
     private String author;
-    //peut devenir un Ojet avec la persistence
+    //peut devenir un Objet avec la persistence
 
+    @ElementCollection
     private List<String> tagList;
 
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Comment> commentList;
 
     private boolean update = false;
@@ -44,5 +54,13 @@ public class Post {
         this.update = update;
        updateDatelist.add(LocalDateTime.now());
        return true;
+    }
+
+    public List<LocalDateTime> getUpdateDatelist() {
+        return updateDatelist;
+    }
+
+    public void setUpdateDatelist(List<LocalDateTime> updateDatelist) {
+        this.updateDatelist = updateDatelist;
     }
 }
