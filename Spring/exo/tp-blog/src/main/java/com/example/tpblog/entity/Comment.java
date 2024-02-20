@@ -30,7 +30,11 @@ public class Comment {
     @NotBlank
     @Size(min=5, max=255)
     private String content;
-    
+
+    @ManyToOne
+    @JoinColumn(name = "post_id")
+    Post post;
+
     @Email
     private String mail;
 

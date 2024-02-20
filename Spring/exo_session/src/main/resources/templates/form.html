@@ -7,11 +7,14 @@
 <body>
 <form th:action="@{/http-session/signin}" method="post">
     <div>
-        <label for="userName"></label>
+        <label for="userName">Login</label>
         <input id="userName" name="login" type="text">
     </div><div>
-        <label for="userpassword"></label>
+        <label for="userpassword">Password</label>
         <input id="userpassword" name="password" type="password">
+    </div>
+    <div>
+        <button >Valider</button>
     </div>
 
 </form>

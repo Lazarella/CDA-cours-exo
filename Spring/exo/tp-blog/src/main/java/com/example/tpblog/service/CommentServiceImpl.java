@@ -2,9 +2,7 @@ package com.example.tpblog.service;
 
 import com.example.tpblog.Repository.CommentRepository;
 import com.example.tpblog.entity.Comment;
-import com.example.tpblog.entity.Comment;
-import com.example.tpblog.mapper.CommentMapper;
-import com.example.tpblog.model.CommentDTO;
+import com.example.tpblog.mapper.Mapper;
 import com.example.tpblog.model.CommentDTO;
 import org.springframework.stereotype.Service;
 
@@ -14,23 +12,23 @@ import java.util.Optional;
 @Service
 public class CommentServiceImpl implements CommentService{
     private final CommentRepository commentRepository;
-    private final CommentMapper commentMapper;
+    private final Mapper mapper;
 
-    public CommentServiceImpl(CommentRepository commentRepository, CommentMapper commentMapper) {
+    public CommentServiceImpl(CommentRepository commentRepository, Mapper mapper) {
         this.commentRepository = commentRepository;
-        this.commentMapper = commentMapper;
+        this.mapper = mapper;
     }
 
     public List<CommentDTO> listComments(){
         return commentRepository.findAll().stream()
-                .map(commentMapper::toDTO)
-                //.map(comment -> commentMapper.commentToCommentDto(comment))
+                //.map(mapper::toDTO)
+                .map(comment -> mapper.toDto(comment))
                 .toList();
     }
 
 
     public CommentDTO createComment(CommentDTO dto){
-        return commentMapper.toDTO(commentRepository.save(commentMapper.toComment(dto)));
+        return mapper.toDto(commentRepository.save(mapper.toComment(dto)));
     }
 
     @Override

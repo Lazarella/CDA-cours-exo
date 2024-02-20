@@ -1,6 +1,7 @@
 package com.example.tpblog.entity;
 
 import com.example.tpblog.entity.Comment;
+import com.example.tpblog.model.UserDTO;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -9,6 +10,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -35,13 +37,14 @@ public class Post {
 
     @NotBlank
     private String content;
-    private LocalDateTime dateTime = LocalDateTime.now();
+    private LocalDate dateTime = LocalDate.now();
 
     @ElementCollection
-    private List<LocalDateTime> updateDatelist ;
+    private List<LocalDate> updateDatelist ;
 
-    private String author;
-    //peut devenir un Objet avec la persistence
+    @ManyToOne
+    @JoinColumn(name = "author_user_id")
+    private User author;
 
     @ElementCollection
     private List<String> tagList;
@@ -50,17 +53,19 @@ public class Post {
     private List<Comment> commentList;
 
     private boolean update = false;
-    public boolean setUpdate() {
-        this.update = update;
-       updateDatelist.add(LocalDateTime.now());
+    public boolean setUpdateList(LocalDate lastUpdate) {
+       updateDatelist.add(lastUpdate);
        return true;
     }
 
-    public List<LocalDateTime> getUpdateDatelist() {
-        return updateDatelist;
+    public void addUpdateDate(LocalDate date) {
+        if (this.updateDatelist == null) {
+            this.updateDatelist = new ArrayList<>();
+        }
+        this.updateDatelist.add(date);
     }
 
-    public void setUpdateDatelist(List<LocalDateTime> updateDatelist) {
+    public void setUpdateDatelist(List<LocalDate> updateDatelist) {
         this.updateDatelist = updateDatelist;
     }
 }
