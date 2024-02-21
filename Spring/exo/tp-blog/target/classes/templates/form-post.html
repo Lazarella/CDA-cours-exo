@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <span th:replace="~{home :: bootstrapImports}"></span>
+    <title>Partage ton opinion</title>
+</head>
+<body>
+<header>
+<span th:replace="~{home :: navbar}"></span>
+</header>
+<main>
+    <form th:action="@{post}" th:object="${post}" method="post">
+        <label for="titlePost">
+            Titre de ton super post!
+        </label>
+        <input th:field="*{title}" type="text" id="titlePost" aria-description="C'est ici que tu peux mettre ton titre">
+        <label for="descriptionPost">
+            Une petite description pour donner envie
+        </label>
+        <input th:field="*{description}" type="text" id="descriptionPost" aria-description="C'est ici que tu peux écrire une courte description">
+        <label for="contentPost">
+            Ecris ton post!
+        </label>
+        <textarea th:field="*{content}" id="contentPost" aria-description="C'est ici que tu peux écrire ton post" placeholder="Une histoire commence..." rows="10" cols="50"></textarea>
+
+        <button type="submit">Valider</button>
+    </form>
+
+</main>
+<footer>
+<span th:replace="~{home :: footer}"></span>
+</footer>
+</body>
+</html>
