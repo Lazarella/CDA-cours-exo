@@ -21,11 +21,10 @@ public class ValidatorEventRegistry implements InitializingBean {
 
     @Override
     public void afterPropertiesSet() throws Exception {
- List<String> events = Arrays.asList("beforeCreate", "beforeDelete", "beforeSave","beforeLinkSave");
+ List<String> events = Arrays.asList("beforeCreate", "beforeDelete", "beforeSave","beforeLinkSave", "afterCreate");
 
     for(Map.Entry<String, Validator> entry: validators.entrySet()){
         events.stream().filter(e -> entry.getKey().startsWith(e)).findFirst().ifPresent(p -> validatingRepositoryEventListener.addValidator(p, entry.getValue()));
     }
-
     }
 }
