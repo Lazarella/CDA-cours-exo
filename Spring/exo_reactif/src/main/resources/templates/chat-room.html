@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Blabla</title>
+</head>
+<body>
+<header></header>
+<main>
+    <div >
+        <p><span th:text="${PostedMessage.user}"></span> : <span th:text="${PostedMessage.content}"></span></p>
+
+    </div>
+<form>
+  <input type="texte" th:field="*{message}">
+    <button type="submit">Bla!</button>
+</form>
+</main>
+<footer></footer>
+</body>
+</html>
