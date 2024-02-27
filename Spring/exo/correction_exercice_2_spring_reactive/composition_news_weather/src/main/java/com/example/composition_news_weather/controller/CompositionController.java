@@ -38,6 +38,9 @@ public class CompositionController {
                         .build());
     }
 
-    @GetMapping("/listCities")
-    public Flux<NewsWeatherDTO> get()
+//    @GetMapping("/listCities")
+//    public Flux<NewsWeatherDTO> get(){
+//
+//        return Flux<NewsWeatherDTO>;
+//    }
 }

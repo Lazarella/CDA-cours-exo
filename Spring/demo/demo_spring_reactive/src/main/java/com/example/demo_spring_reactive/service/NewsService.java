@@ -22,4 +22,12 @@ public class NewsService {
     public Flux<String> getFlux() {
         return sink.asFlux();
     }
+
+    public Flux<String> getNews() {
+        return sink.asFlux();
+    }
+
+    public Flux<String> getNewsByCity(String city) {
+        return sink.asFlux();
+    }
 }

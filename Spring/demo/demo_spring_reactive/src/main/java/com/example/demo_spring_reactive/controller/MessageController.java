@@ -7,6 +7,7 @@ import com.example.demo_spring_reactive.service.MessageService;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 @RestController
 @RequestMapping("messages")
@@ -27,4 +28,5 @@ public class MessageController {
     public void post(@RequestBody MessageDTO messageDTO) {
         messageService.sendMessage(messageDTO.getSender(), messageDTO.getContent());
     }
+
 }
