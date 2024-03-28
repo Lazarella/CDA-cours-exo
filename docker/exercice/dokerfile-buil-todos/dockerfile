@@ -43,19 +43,26 @@ FROM node AS BUILD
 
 WORKDIR  /app
 
+# variable d'environnement (changement dans la déclaration du port dans app.js)
+
+ENV PORT=3002
+
 COPY package*.json ./
 
-RUN npm install  
+RUN npm install 
+
 
 COPY . . 
 
-RUN npm run build
+EXPOSE ${PORT} 
 
-FROM nginx
+CMD [ "node","app.js" ]
 
-COPY --from=build /app/build /usr/share/nginx/html
+# Commande pour construire l'image
+# docker build -t todonode . --no-cache
 
-EXPOSE 80
+# Commande pour le lancement d'un container avec cette image 
+# docker run -p 5000:3001 todonode
 
-CMD [ "nginx","-g","daemon off;" ]
-
+#commande pour définir une variable d'environnement 
+#docker run -e PORT=5000 -d -p 5005:5000 testenv
